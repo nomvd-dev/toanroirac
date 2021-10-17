@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/toanroirac/static/css/main.a617e044.chunk.css",
+    "main.js": "/toanroirac/static/js/main.d89f7ac9.chunk.js",
+    "main.js.map": "/toanroirac/static/js/main.d89f7ac9.chunk.js.map",
+    "runtime-main.js": "/toanroirac/static/js/runtime-main.427e8082.js",
+    "runtime-main.js.map": "/toanroirac/static/js/runtime-main.427e8082.js.map",
+    "static/js/2.2cdce275.chunk.js": "/toanroirac/static/js/2.2cdce275.chunk.js",
+    "static/js/2.2cdce275.chunk.js.map": "/toanroirac/static/js/2.2cdce275.chunk.js.map",
+    "static/js/3.80ae9d4e.chunk.js": "/toanroirac/static/js/3.80ae9d4e.chunk.js",
+    "static/js/3.80ae9d4e.chunk.js.map": "/toanroirac/static/js/3.80ae9d4e.chunk.js.map",
+    "index.html": "/toanroirac/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/toanroirac/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.2cdce275.chunk.js.LICENSE.txt": "/toanroirac/static/js/2.2cdce275.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/toanroirac/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.427e8082.js",
+    "static/js/2.2cdce275.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.d89f7ac9.chunk.js"
+  ]
+}
