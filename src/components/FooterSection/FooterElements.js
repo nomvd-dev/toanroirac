@@ -7,6 +7,9 @@ export const FooterContainer = styled.div`
     justify-content: center;
     align-items: center;
     background: var(--quinary-color);
+    @media screen and (max-width: 1300px){
+        height: 50px;
+    }
 `
 
 export const FooterContent = styled.div`
@@ -24,4 +27,5 @@ export const FooterP = styled.p`
     font-weight: 600;
     letter-spacing: 3px;
     color: var(--primary-color);
+    margin-bottom: 0;
 ` 

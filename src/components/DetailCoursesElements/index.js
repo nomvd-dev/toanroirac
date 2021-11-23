@@ -43,7 +43,7 @@ export const LeftColumn = styled.div`
     }
 
     &::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px var(--quinary-color); 
+        box-shadow: inset 0 0 6px var(--quinary-color); 
         border-radius: 10px;
         /* background: var(--quinary-color); */
     }
@@ -51,7 +51,10 @@ export const LeftColumn = styled.div`
     &::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background: var(--quinary-color);
-        -webkit-box-shadow: inset 0 0 6px var(--quinary-color); 
+        box-shadow: inset 0 0 6px var(--quinary-color); 
+    }
+    @media screen and (max-width: 1300px){
+        height: 500px;
     }
 `
 

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import NavbarSection from './components/NavbarSection';
 import Logic from './pages/Logic';
 import FooterSection from './components/FooterSection';
+import Quanhe from './pages/Quanhe';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NavbarSection />
       <Switch>
         <Route path="/toanroirac/logic" component={Logic} />
+        <Route path="/toanroirac/quanhe" component={Quanhe} />
         <Route path="/toanroirac" component={Home} />
       </Switch>
       <FooterSection />
