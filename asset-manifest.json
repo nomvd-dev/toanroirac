@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/toanroirac/static/css/main.ee81b1ac.chunk.css",
-    "main.js": "/toanroirac/static/js/main.cb401ba5.chunk.js",
-    "main.js.map": "/toanroirac/static/js/main.cb401ba5.chunk.js.map",
+    "main.js": "/toanroirac/static/js/main.79632fe6.chunk.js",
+    "main.js.map": "/toanroirac/static/js/main.79632fe6.chunk.js.map",
     "runtime-main.js": "/toanroirac/static/js/runtime-main.0d860106.js",
     "runtime-main.js.map": "/toanroirac/static/js/runtime-main.0d860106.js.map",
-    "static/js/2.1bd7050d.chunk.js": "/toanroirac/static/js/2.1bd7050d.chunk.js",
-    "static/js/2.1bd7050d.chunk.js.map": "/toanroirac/static/js/2.1bd7050d.chunk.js.map",
+    "static/js/2.029d64f1.chunk.js": "/toanroirac/static/js/2.029d64f1.chunk.js",
+    "static/js/2.029d64f1.chunk.js.map": "/toanroirac/static/js/2.029d64f1.chunk.js.map",
     "index.html": "/toanroirac/index.html",
     "static/css/main.ee81b1ac.chunk.css.map": "/toanroirac/static/css/main.ee81b1ac.chunk.css.map",
-    "static/js/2.1bd7050d.chunk.js.LICENSE.txt": "/toanroirac/static/js/2.1bd7050d.chunk.js.LICENSE.txt",
+    "static/js/2.029d64f1.chunk.js.LICENSE.txt": "/toanroirac/static/js/2.029d64f1.chunk.js.LICENSE.txt",
     "static/media/douutien_bangchantri.jpg": "/toanroirac/static/media/douutien_bangchantri.90163b6b.jpg",
     "static/media/logic.svg": "/toanroirac/static/media/logic.92770432.svg",
     "static/media/ltvt1.jpg": "/toanroirac/static/media/ltvt1.5b974313.jpg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0d860106.js",
-    "static/js/2.1bd7050d.chunk.js",
+    "static/js/2.029d64f1.chunk.js",
     "static/css/main.ee81b1ac.chunk.css",
-    "static/js/main.cb401ba5.chunk.js"
+    "static/js/main.79632fe6.chunk.js"
   ]
 }
