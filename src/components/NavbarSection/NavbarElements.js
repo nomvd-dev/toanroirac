@@ -37,6 +37,15 @@ export const NavbarLogo = styled(Link)`
     }
 `
 
+export const NavbarSearch = styled(Link)`
+    color: var(--primary-color);
+    text-decoration: none;
+    &:hover{
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+`
+
 export const NavbarMenu = styled.ul`
     display: flex;
     justify-content: space-between;

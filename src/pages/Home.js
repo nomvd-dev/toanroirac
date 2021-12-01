@@ -3,7 +3,9 @@ import HeroSection from '../components/HeroSection'
 import LogicSection from '../components/LogicSection'
 import { objectLogic } from '../components/LogicSection/Data'
 import { objectQuanhe } from '../components/QuanheSection/Data'
+import { objectBoole } from '../components/BooleSection/Data'
 import QuanheSection from '../components/QuanheSection'
+import BooleSection from '../components/BooleSection'
 
 const Home = () => {
     return (
@@ -11,6 +13,7 @@ const Home = () => {
             <HeroSection />
             <LogicSection {...objectLogic} />
             <QuanheSection {...objectQuanhe} />
+            <BooleSection {...objectBoole} />
         </div>
     )
 }

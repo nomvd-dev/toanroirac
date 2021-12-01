@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
-import { Nav, NavbarContainer, NavbarItem, NavbarLink, NavbarLogo, NavbarMenu } from './NavbarElements'
+import { Nav, NavbarContainer, NavbarItem, NavbarLink, NavbarLogo, NavbarMenu, NavbarSearch } from './NavbarElements'
 import { animateScroll as scroll } from "react-scroll";
+import {FaSearch} from 'react-icons/fa'
 
 const NavbarSection = () => {
     const [navbar, setNavbar] = useState(false);
@@ -40,6 +41,9 @@ const NavbarSection = () => {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}>Bản quyền</NavbarLink>
+                        </NavbarItem>
+                        <NavbarItem>
+                            <NavbarSearch to="/toanroirac/search"><FaSearch/></NavbarSearch>
                         </NavbarItem>
                     </NavbarMenu>
                 </NavbarContainer>

@@ -1,7 +1,8 @@
+/* eslint-disable no-sequences */
 import React from 'react';
 import { QHPageContainer } from './QuanhePageElements';
 import { Container, Title, LeftColumn, LeftH2, LeftH3, LeftH4, RightColumn, RightH2, RightH3, RightH4, RightP, Div, Image, RightWordBold, RightWordItalic } from '../DetailCoursesElements';
-import {FaCircle} from 'react-icons/fa';
+// import {FaCircle} from 'react-icons/fa';
 
 const QuanhePage = () => {
     return (
@@ -116,326 +117,231 @@ const QuanhePage = () => {
                 </LeftColumn>
                 {/* Right Column */}
                 <RightColumn>
-                    <Title>CƠ SỞ LOGIC</Title>
+                    <Title>Quan hệ</Title>
                     {/* Mệnh đề Logic */}
                     <Div id="1">
-                        <RightH2>1. Mệnh đề</RightH2>
+                        <RightH2>1. Quan hệ hai ngôi</RightH2>
                             <RightH3 id="1_1">1.1 Định nghĩa</RightH3>
-                                <RightP>Mệnh đề là một khẳng định có giá trị chân lý xác định, đúng hoặc sai.</RightP>
-                                <RightP>Câu hỏi, câu cảm thán, mệnh lệnh… không là mệnh đề.</RightP>
+                                <RightP>Cho hai tập A, B. Ta gọi tập R là một quan hệ hai ngôi từ A đến B <br/> nếu R &sube; A x B.</RightP>
+                                <RightP>Nếu (a, b) &isin; R thì ta nói a có quan hệ R với b và ký hiệu a R b; ngược lại nếu (a, b) &notin; R thì ta kí hiệu  a <span style={{borderTop: "1px solid"}}>R</span> b.</RightP>
+                                <RightP>Khi A = B, ta gọi R là một quan hệ hai ngôi trên A.</RightP>
                                 <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
-                                <RightP>* Đại học CNTT trực thuộc ĐHQG TP.HCM.</RightP>
-                                <RightP>* 1+7 =8.</RightP>
-                                <RightP>* Hôm nay em đẹp quá!  (không là mệnh đề)</RightP>
-                                <RightP>* Hôm nay ngày thứ mấy? (không là mệnh đề)</RightP>
-                                    <RightH4 id="1_1_a">a. Ký hiệu</RightH4>
-                                        <RightP>Người ta dùng các ký hiệu P, Q, R… (p,q,r,…) để chỉ mệnh đề.</RightP>
-                                    <RightH4 id="1_1_b">b. Chân trị</RightH4>
-                                        <RightP>Một mệnh đề chỉ có thể đúng hoặc sai, không thể đồng thời vừa đúng vừa sai. Khi mệnh đề P đúng ta nói P có chân trị đúng, ngược lại ta nói P có chân trị sai. </RightP>
-                                        <RightP>Chân trị đúng và chân trị sai sẽ được ký hiệu lần lượt là 1(hay Đ,T) và 0(hay S,F)</RightP>
-                            <RightH3 id="1_2">1.2 Phân loại</RightH3>
-                                <RightH4 id="1_2_a">a. Phức hợp</RightH4>
-                                    <RightP>Phức hợp là mệnh đề được xây dựng từ các mệnh đề khác nhờ liên kết bằng các liên từ (và, hay, khi và chỉ khi,…) hoặc trạng từ “không”.</RightP>
-                                <RightH4 id="1_2_b">b. Sơ cấp</RightH4>
-                                    <RightP>Là mệnh đề không thể xây dựng từ các mệnh đề khác thông qua liên từ hoặc trạng từ “không”.</RightP>
+                                <RightP>Cho A = {1, 2, 3, 4}, R là một quan hệ (hai ngôi) trên A và <br/> R = {'{'}(a, b) &isin; A | a là ước của b {'}'}.</RightP>
+                                <RightP>Khi đó: </RightP>
+                                <RightP>R = {'{'}(1, 1), (1, 2), (1, 3), (1, 4), (2, 2), (2, 4), (3, 3), (4,4){'}'}</RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/1_1.png').default} />
+                            <RightH3 id="1_2">1.2 Các tính chất</RightH3>
+                                <RightH4 id="1_2_a">a. Tính phản xạ</RightH4>
+                                    <RightP>Giả sử R là một quan hệ hai ngôi trên tập A.<br/>Ta nói quan hệ R có tính phản xạ nếu và chỉ nếu a R a ,  &forall; a &isin; A.</RightP>
                                     <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
-                                    <RightP>- 2 là số nguyên tố.(Sơ cấp)</RightP>
-                                    <RightP>- 2 không là số nguyên tố.(Sơ cấp)</RightP>
-                                    <RightP>- 2 là số nguyên tố và là số lẻ.(Phức hợp)</RightP>
-                                    <RightP>- An đang xem ti vi hay đang học bài.(Phức hợp)</RightP>
-                            <RightH3 id="1_3">1.3 Các phép toán</RightH3>
-                                <RightH4 id="1_3_a">a. Phủ định</RightH4>
-                                    <RightP>Phủ định của mệnh đề P là một mệnh đề, ký hiệu là  &#8514;P hay    (đọc là “không” P hay “phủ định của” P).</RightP>
-                                    <Div className="d-flex justify-content-between">
-                                        <RightP>Bảng chân trị :</RightP>
-                                        <Image src={require('../../images/phudinh.jpg').default} />
-                                    </Div>
+                                    <RightP>Trên tập A = {1, 2, 3, 4}, <br/> 
+                                    quan hệ R1 = {'{'}(1,1), (1,2), (2,1), (2, 2), (3, 4), (4, 1), (4, 4){'}'} không phản xạ vì (3, 3) &notin; R1 <br/>
+                                    R2 = {'{'}(1,1), (1,2), (1,4), (2, 2), (3, 3), (4, 1), (4, 4){'}'} phản xạ vì (1,1), (2, 2), (3, 3), (4, 4) &isin; R2 </RightP>
+                                    <RightP>
+                                    - Quan hệ  ≤  trên Z phản xạ vì a  ≤  a, &forall; a &isin; Z. <br/>
+                                    - Quan hệ &gt; trên Z không phản xạ vì 1 không lớn hơn 1. <br/>
+                                    - Quan hệ “ | ” (“ước số”) trên Z+ là phản xạ vì mọi số nguyên dương a là ước của chính nó.</RightP>
+                                <RightH4 id="1_2_b">b. b)	Tính đối xứng, phản xứng</RightH4>
+                                    <RightP>Giả sử R là một quan hệ hai ngôi trên tập A. <br/>
+                                    - Ta nói quan hệ R có tính đối xứng nếu và chỉ nếu a R b &rArr; b R a , &forall; a, b &isin; A. <br/>
+                                    - Ta nói quan hệ R có tính phản xứng nếu và chỉ nếu (a R b &and;  b R a) &rArr; a = b ,  &forall; a, b &isin; A.</RightP>
                                     <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
-                                    <Div className="d-flex justify-content-around">
-                                        <RightP>2 là số nguyên tố.</RightP>
-                                        <RightP>Phủ định: 2 không là số nguyên tố</RightP>
-                                    </Div>
-                                    <Div className="d-flex justify-content-around">
-                                        <RightP>15 &gt; 5 </RightP>
-                                        <RightP>Phủ định: 15 ≤ 5</RightP>
-                                    </Div>
-                                <RightH4 id="1_3_b">b. Hội</RightH4>
-                                    <RightP>Hội của hai mệnh đề P, Q là một mệnh đề, kí hiệu P &#8743; Q (đọc là “P và Q)</RightP>
-                                    <Div className="d-flex justify-content-between">
-                                        <RightP>Bảng chân trị :</RightP>
-                                        <Image src={require('../../images/hoi.jpg').default} />
-                                    </Div>
-                                    <RightP>Nhận xét: P &#8743; Q đúng khi và chỉ khi P và Q đồng thời đúng.</RightP>
+                                    <RightP>
+                                        - Quan hệ R1 = {'{'}(1,1), (1,2), (2,1){'}'} trên tập A = {'{'}1, 2, 3, 4{'}'} là đối xứng.<br/>
+                                        - Quan hệ  ≤  trên Z không đối xứng, tuy nhiên nó phản xứng vì (a ≤  b) &and; (b  ≤  a) &rArr; (a = b).<br/>
+                                        - Quan hệ “ | ” ( “ước số” ) trên Z+  không đối xứng, tuy nhiên nó có tính phản xứng vì (a | b) &and; (b | a) &rArr; (a = b).</RightP>
+                                <RightH4 id="1_2_c">c. Tính bắc cầu ( truyền )</RightH4>
+                                    <RightP>
+                                    Giả sử R là một quan hệ hai ngôi trên tập A.<br/>
+                                    - Ta nói quan hệ R có tính bắc cầu (truyền) nếu và chỉ nếu <br/>
+                                    (a R b &and; b R c) &rArr; a R c , &forall; a,b,c &isin; A.
+                                    </RightP>
                                     <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
-                                    <RightP>- P: “Hôm nay là chủ nhật”</RightP>
-                                    <RightP>- Q: “Hôm nay trời mưa”</RightP>
-                                    <RightP>- P &#8743; Q: “ Hôm nay là chủ nhật và trời mưa”</RightP>
-                                <RightH4 id="1_3_c">c. Tuyển</RightH4>
-                                    <RightP>Tuyển của hai mệnh đề P, Q là một mệnh đề, kí hiệu P &#8744; Q (đọc là “P hay Q”).</RightP>
-                                    <Div className="d-flex justify-content-between">
-                                        <RightP>Bảng chân trị :</RightP>
-                                        <Image src={require('../../images/tuyen.jpg').default} />
-                                    </Div>
-                                    <RightP>Nhận xét: P &#8744; Q sai khi và chỉ khi P và Q đồng thời sai.</RightP>
+                                    <RightP>
+                                    Quan hệ R = {'{'}(1,1), (1,2), (2,1), (2, 2), (1, 3), (2, 3){'}'} trên tập A = {'{'}1, 2, 3, 4{'}'} có tính bắc cầu.<br/> 
+                                    - Quan hệ ≤ và “|” trên Z có tính bắc cầu vì <br/> 
+                                    (a ≤ b) &and; (b ≤ c) &rArr; (a ≤ c)<br/>(a | b) &and; (b | c) &rArr; (a | c)</RightP>
+                                <RightH4 id="1_2_d">d. Biểu diễn quan hệ</RightH4>
+                                    <RightP>
+                                        Cho R là quan hệ từ A = {'{'}a1, a2, …, a<sub>m</sub>{'}'} đến B = {'{'}b1, b2, …, bn{'}'}. Ma trận biểu diễn của R là ma trận M<sub>R</sub> = [m<sub>ij</sub>] <sub>mxn</sub> xác định bởi:
+                                    </RightP>
+                                    <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/1_2_d.png').default} />
                                     <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
-                                    <RightP>- e &gt; 4 hay e &gt; 5. (Sai)</RightP>
-                                    <RightP>- 2 là số nguyên tố hay là số lẻ. (Đúng)</RightP>
-                                <RightH4 id="1_3_d">d. Kéo theo</RightH4>
-                                    <RightP>Mệnh đề P kéo theo mệnh đề Q là một mệnh đề, kí hiệu P &rarr; Q (đọc là “P kéo theo Q” hay “Nếu P thì Q” hay “P là điều kiện đủ của Q” hay “Q là điều kiện cần của P”).</RightP>
-                                    <Div className="d-flex justify-content-between">
-                                        <RightP>Bảng chân trị :</RightP>
-                                        <Image src={require('../../images/keotheo.jpg').default} />
-                                    </Div>
-                                    <RightP>Nhận xét: P &rarr; Q sai khi và chỉ khi P đúng mà Q sai.</RightP>
-                                    <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
-                                    <RightP>- e &gt; 4 hay 5 &gt; 6.</RightP>
-                                <RightH4 id="1_3_e">e. Kéo theo hai chiều(Tương đương)</RightH4>
-                                    <RightP>Mệnh đề P kéo theo mệnh đề Q và ngược lại (mệnh đề P tương đương với mệnh đề Q) là một mệnh đề, ký hiệu P &harr; Q (đọc là “P nếu và chỉ nếu Q” hay “P khi và chỉ khi Q” hay “P là điều  kiện cần và đủ của Q”).</RightP>
-                                    <Div className="d-flex justify-content-between">
-                                        <RightP>Bảng chân trị :</RightP>
-                                        <Image src={require('../../images/keotheo.jpg').default} />
-                                    </Div>
-                                    <RightP>Nhận xét: P &harr; Q đúng khi và chỉ khi P và Q có cùng chân trị.</RightP>
-                                    <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
-                                    <RightP>- 6 chia hết cho 3 khi và chỉ khi 6 chia hết cho 2.</RightP>
+                                    <RightP>
+                                    Cho R là quan hệ từ A = {'{'}1, 2, 3, 4{'}'} đến B = {'{'}u, v, w{'}'},<br/> R = {'{'}(1, u), (1, v), (2, w), (3, w), (4, u){'}'}.<br/> Khi đó R có thể biễu diễn như sau:<br/>
+                                    <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/1_2_d1.png').default} />
+                                    </RightP>
+                                    <RightP>Đây là ma trận cấp 4×3 biễu diễn cho quan hệ R</RightP>
+                                    <RightP></RightP>
+                                    <RightP>Cho R là quan hệ từ A = {'{'}1, 2, 3{'}'} đến B = {'{'}1, 2{'}'}:<br/> a R b &hArr; a &gt; b. Khi đó ma trận biểu diễn của R là: <br/></RightP>
+                                    <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/1_2_d2.png').default} />
+                                    <RightP>Cho R là quan hệ trên tập A, khi đó MR là ma trận vuông.</RightP>
+
+                                    <RightP>+ R là phản xạ nếu tất cả các phần tử trên đường chéo của M<sub>R</sub> đều bằng 1:<br/></RightP>
+                                    <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/1_2_d3.png').default} />
+
+                                    <RightP>+ R là đối xứng nếu M<sub>R</sub> là đối xứng m<sub>ij</sub> = m<sub>ji</sub>, &forall; i, j.<br/></RightP>
+                                    <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/1_2_d4.png').default} />
+
+                                    <RightP>+ R là phản xứng nếu M<sub>R</sub> thỏa: <br/>
+                                    m<sub>ij</sub> = 0 hoặc  m<sub>ji</sub> = 0 nếu i &ne; j.<br/></RightP>
+                                    <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/1_2_d5.png').default} />
                     </Div>
-                    {/* Biểu thức Logic */}
+                    {/* Quan hệ tương đương */}
                     <Div>
-                        <RightH2 id="2">2. Biểu thức logic</RightH2>
+                        <RightH2 id="2">2. Quan hệ tương đương</RightH2>
                             <RightH3 id="2_1">2.1 Định nghĩa</RightH3>
-                                <RightP>Biểu thức logic được cấu tạo từ:</RightP>
-                                <RightP>- Các mệnh đề (các hằng mệnh đề)</RightP>
-                                <RightP>- Các biến mệnh đề p, q, r, …, tức là các biến lấy giá trị là các mệnh đề nào đó</RightP>
-                                <RightP>- Các phép toán logic &#8514;, &#8743;, &#8744;, &rarr;, &harr; và dấu đóng mở ngoặc () để chỉ rõ thứ tự thực hiện của các phép toán.</RightP>
+                                <RightP>Quan hệ R trên tập A được gọi là tương đương nếu và chỉ nếu nó có tính chất phản xạ, đối xứng và bắc cầu.</RightP>
+                        
                                 <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
-                                <RightP>- E(p,q) = &#8514;(&#8514;p &#8744; q)</RightP>
-                                <RightP>- F(p,q,r) = (p &#8743; q) &rarr; &#8514;(q &#8744; r)</RightP>
+                                <RightP>
+                                    - Quan hệ R trên tập các chuỗi ký tự xác định bởi aRb nếu a và b có cùng độ dài. Khi đó R là quan hệ tương đương.<br/>
+                                    - Cho R là quan hệ trên tập R sao cho <br/> 
+                                        aRb &hArr; a – b &isin; Z<br/>
+                                    Khi đó R là quan hệ tương đương.<br/>
+                                    - Cho m là số nguyên dương và R là quan hệ trên Z :<br/>
+                                    aRb &hArr; (a – b) chia hết m<br/>
+                                    Khi đó R là quan hệ tương đương.<br/>
+                                    - Rõ ràng quan hệ này có tính phản xạ và đối xứng.<br/>
+                                    - Cho a, b, c sao cho a – b và b – c chia hết cho m, khi đó a – c = a – b + b – c cũng chia hết cho m. Suy ra R có tính chất bắc cầu.<br/>
+                                    - Quan hệ này được gọi là đồng dư modulo m và chúng ta viết a &equiv; b (mod m) thay vì aRb.
+                                    </RightP>
                                 {/* <RightP></RightP> */}
-                            <RightH3 id="2_2">2.2 Độ ưu tiên và bảng chân trị</RightH3>
-                                <RightP>- Ưu tiên mức 1: ()</RightP>
-                                <RightP>- Ưu tiên mức 2: &#8514;</RightP>
-                                <RightP>- Ưu tiên mức 3: &#8743;, &#8744;</RightP>
-                                <RightP>- Ưu tiên mức 4: &rarr;, &harr;</RightP>
-                                <RightP>Bảng chân trị của một biểu thức logic: là bảng liệt kê chân trị của biểu thức logic theo các trường hợp về chân trị của tất cả các biến mệnh đề trong biểu thức logic hay theo các bộ giá trị của bộ biến mệnh đề.</RightP>
-                                <RightP><span className="font-weight-bold">Ví dụ:</span> Cho E(p,q,r) =(p &#8744; q) &rarr; r .</RightP>
-                                <RightP>Ta có bảng chân trị sau:</RightP>
-                                <Image style={{marginLeft: '90px'}} src={require('../../images/douutien_bangchantri.jpg').default} />
+                            <RightH3 id="2_2">2.2 Lớp tương đương</RightH3>
+                                <RightP>Cho R là quan hệ tương đương trên A và a &isin; A . Lớp tương đương chứa a theo quan hệ R được ký hiệu bởi [a]<sub>R</sub> hoặc [a] là tập hợp tất cả những phần tử có quan hệ R với a.<br/>
+                                [a]<sub>R</sub> = {'{'}b &isin; A| b R a{'}'}</RightP>
+                                <RightP>• Mỗi phần tử x &isin; [a]<sub>R</sub> được gọi là một phần tử đại diện của lớp tương đương [a]<sub>R</sub>.</RightP>
+                                <RightP>• Tập thương của A theo quan hệ R, ký hiệu là A/R, được định nghĩa là tập tất cả các lớp tương đương của các phần tử thuộc A, nghĩa là <br/> 
+                                A/R = {'{'}[a]<sub>R</sub> | &forall; a &isin; A{'}'}</RightP>
+
+                                <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
+                                <RightP>Tìm các lớp tương đương modulo 8 chứa 0 và 1?</RightP>
+                                <RightP>Giải: Lớp tương đương modulo 8 chứa 0 gồm tất cả các số nguyên a chia hết cho 8. Do đó: <br/>
+                                [0]<sub>8</sub> = {'{'} …, – 16, – 8, 0, 8, 16, … {'}'}<br/> 
+                                Tương tự<br/>
+                                [1]<sub>8</sub> = {'{'}a | a chia 8 dư 1{'}'} = {'{'} …, – 15, – 7, 1, 9, 17, … {'}'}</RightP>
                                 {/* <RightP></RightP> */}
-                            <RightH3 id="2_3">2.3 Tương đương logic</RightH3>
-                                <RightP>Hai biểu thức logic E và F theo các biến mệnh đề nào đó được gọi là tương đương logic nếu chúng có cùng bảng chân trị.</RightP>
-                                <RightP>Ký hiệu: E &hArr; F  (E tương đương với F).</RightP>
-                                <RightP><span className="font-weight-bold">Ví dụ:</span>  &#8514;(p &#8744; q) &hArr; &#8514;p &#8743; &#8514;q</RightP>
-                                <RightP>Biểu thức logic E được gọi là hằng đúng nếu chân trị của E luôn bằng 1(đúng) trong mọi trường hợp về chân trị của các biến mệnh đề có trong E. Nói cách khác, E là hằng đúng khi ta có E &hArr; 1.</RightP>
-                                <RightP>Tương tự, E là một hằng sai khi ta có E &hArr; 0.</RightP>
-                                <RightP><span className="font-weight-bold">Ví dụ:</span> E(p,q) = p &#8743; &#8514;p là hằng sai.</RightP>
-                                <RightP>F(p,q) =(p&rarr;q) &harr; (&#8514;p &#8744; q) là hằng đúng.</RightP>
-                                <RightP>Định lý: Hai biểu thức logic E và F tương đương với nhau khi và chỉ khi E &harr; F là hằng đúng.</RightP>
-                                <RightP><span className="font-weight-bold">Ví dụ:</span> (p&rarr;q) &hArr; (&#8514;p &#8744; q)</RightP>
-                                <RightP>Hệ quả logic: F được gọi là hệ quả logic của E nếu E &rarr; F là hằng đúng.</RightP>
-                                <RightP>Ký hiệu: E &rArr; F</RightP>
-                                <RightP><span className="font-weight-bold">Ví dụ:</span> &#8514;(p &#8744; q) &rArr; &#8514;p</RightP>
-                                {/* <RightP></RightP> */}
-                            <RightH3 id="2_4">2.4 Các luật logic</RightH3>
-                                <RightP className="font-weight-bold">(1) Phủ định của phủ định: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>&#8514;&#8514;p &hArr; p</RightP>
-                                <RightP className="font-weight-bold">(2) Qui tắc De Morgan: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>&#8514;(p &#8744; q) &hArr; &#8514;p &#8743; &#8514;q</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>&#8514;(p &#8743; q) &hArr; &#8514;p &#8744; &#8514;q</RightP>
-                                <RightP className="font-weight-bold">(3) Luật giao hoán: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8744; q &hArr; q &#8744; p</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8743; q &hArr; q &#8743; p</RightP>
-                                <RightP className="font-weight-bold">(4) Luật kết hợp: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>(p &#8744; q) &#8744; r &hArr; p &#8744; (q &#8744; r)</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>(p &#8743; q) &#8743; r &hArr; p &#8743; (q &#8743; r)</RightP>
-                                <RightP className="font-weight-bold">(5) Luật phân phối: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8744; (q &#8743; r) &hArr; (p &#8744; q) &#8743; (p &#8744; r)</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8743; (q &#8744; r) &hArr; (p &#8743; q) &#8744; (p &#8743; r)</RightP>
-                                <RightP className="font-weight-bold">(6) Luật lũy đẳng: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8743; p &hArr; p</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8744; p &hArr; p</RightP>
-                                <RightP className="font-weight-bold">(7) Luật trung hòa: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8744; 0 &hArr; p</RightP>
-                                <RightP> <FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8743; 1 &hArr; p</RightP>
-                                <RightP className="font-weight-bold">(8) Luật về phần tử bù: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8743; &#8514;p &hArr; 0</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8744; &#8514;p &hArr; 1</RightP>
-                                <RightP className="font-weight-bold">(9) Luật thống trị: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8743; 0 &hArr; 0</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8744; 1 &hArr; 1</RightP>
-                                <RightP className="font-weight-bold">(10) Luật hấp thu: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8744; (p &#8743; q) &hArr; p</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &#8743; (p &#8744; q) &hArr; p</RightP>
-                                <RightP className="font-weight-bold">(11) Luật về phép kéo theo: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>p &rarr; q &hArr; &#8514;p &#8744; q &hArr; &#8514;q &rarr; &#8514;p</RightP>
-                                <RightP><span className="font-weight-bold">Ví dụ:</span> Cho p, q, r là các biến mệnh đề. Chứng minh rằng: (&#8514;p &rarr; r) &#8743; (q &rarr; r) &hArr; (p &rarr; q) &rarr; r </RightP>
-                                <RightP className="font-weight-bold">Giải:</RightP>
-                                <RightP>(&#8514;p &rarr; r) &#8743;  (q &rarr; r)</RightP>
-                                <RightP>&hArr;  ( p &#8744; r ) &#8743;  (&#8514;q &#8744; r)</RightP>
-                                <RightP>&hArr;  ( p &#8743; &#8514;q ) &#8744; r</RightP>
-                                <RightP>&hArr; &#8514;(&#8514;p &#8744; q ) &#8744; r</RightP>
-                                <RightP>&hArr; &#8514;( p &rarr; q ) &#8744; r</RightP>
-                                <RightP>&hArr; (p &rarr; q ) &rarr; r</RightP>
+                            <RightH3 id="2_3">2.3 Sự phân hoạch các lớp tương đương</RightH3>
+                                <RightP><span className="font-weight-bold">Nhận xét:</span> Trong ví dụ trên, các lớp tương đương [0]<sub>8</sub> và [1]<sub>8</sub> là rời nhau.</RightP>
+                                <RightP><span className="font-weight-bold">Mệnh đề:</span> Cho R là quan hệ tương đương trên tập A. Với mọi a,b &isin; A các điều kiện sau đây tương đương với nhau.</RightP>
+                                <RightP>
+                                    (i) a R b <br/>
+                                    (ii) [a]<sub>R</sub> = [b]<sub>R</sub> <br/>
+                                    (iii) [a]<sub>R</sub> &cap; [b]<sub>R</sub> &ne; &empty;
+                                </RightP>
+                                <RightP><span className="font-weight-bold">Chú ý:</span> 
+                                - Từ mệnh đề trên ta thấy rằng các lớp tương đương của các phần tử của tập A hoặc trùng nhau, hoặc rời nhau.<br/>
+                                - Hơn nữa, hợp của tất cả các lớp tương đương này trùng với A, cho nên tập A là hợp rời rạc của các lớp tương đương.Ta cũng nói rằng tập A được phân hoạch thành các lớp tương đương theo quan hệ R.<br/>
+                                - Cho {'{'}A<sub>1</sub>, A<sub>2</sub>, … {'}'} là phân hoạch A thành các tập con không rỗng, rời nhau. Khi đó có duy nhất quan hệ tương đương trên A sao cho mỗi A<sub>i</sub> là một lớp tương đương.<br/>
+                                - Thật vậy với mỗi a, b &isin; A, ta đặt a R b nếu có tập con Ai sao cho a, b &isin; A<sub>i</sub>.
+                                - Dễ dàng chứng minh rằng R là quan hệ tương đương trên A và [a]<sub>R</sub> = A<sub>i</sub> nếu a &isin; A<sub>i</sub>.</RightP>
+
+                                <RightP><span className="font-weight-bold">Ví dụ:</span></RightP>
+                                <RightP>
+                                - Cho m là số nguyên dương, khi đó có m lớp đồng dư modulo m là [0]<sub>m</sub> , [1]<sub>m</sub> , …, [m – 1]<sub>m</sub>.<br/>
+                                - Chúng lập thành phân hoạch của Z thành các tập con rời nhau.<br/>
+                                Chú ý rằng:<br/>
+                                [0]<sub>m</sub> = [m]<sub>m</sub> = [2m]<sub>m</sub> = …<br/>
+                                [1]<sub>m</sub> = [m + 1]<sub>m</sub> = [2m +1]<sub>m</sub> = …<br/>
+                                …………………………………<br/>
+                                [m – 1]<sub>m</sub> = [2m – 1]<sub>m</sub> = [3m – 1]<sub>m</sub> = … <br/>
+                                - Mỗi lớp tương đương này được gọi là số nguyên modulo m.<br/>
+                                - Tập hợp các số nguyên modulo m được ký hiệu bởi Z<sub>m</sub> , đó chính là tập thương của Z theo quan hệ đồng dư modulo m.<br/>
+                                Z<sub>m</sub> = Z/R = {'{'}[0]<sub>m</sub> , [1]<sub>m</sub> , …, [m – 1]<sub>m</sub>{'}'}</RightP>
                                 {/* <RightP></RightP> */}
                     </Div>
                     {/* Quy tắc suy diễn */}
                     <Div>
-                        <RightH2 id="3">3. Quy tắc suy diễn</RightH2>
+                        <RightH2 id="3">3. Quan hệ thứ tự</RightH2>
                             <RightH3 id="3_1">3.1 Định nghĩa</RightH3>
-                                <RightP>Trong các chứng minh toán học, ta thường thấy những lý luận dẫn xuất có dạng: nếu <RightWordItalic>P1</RightWordItalic> và <RightWordItalic>P2</RightWordItalic> và <RightWordItalic>Pn</RightWordItalic> thì <RightWordItalic>Q</RightWordItalic></RightP>
-                                <RightP>Dạng lý luận này là đúng khi ta có biểu thức 
-                                    <RightWordItalic>(P1 &#8743; P2 &#8743; ... &#8743; Pn &rarr; Q) </RightWordItalic>
-                                    là hằng đúng.</RightP>
-                                <RightP>Ta gọi dạng lý luận trên là một quy tắc suy diễn và thường được viết theo các cách sau đây:</RightP>
-                                <RightP><RightWordBold>Cách 1: Biểu thức hằng đúng</RightWordBold></RightP>
-                                <RightP className="text-center"> 
-                                    <RightWordItalic> [(P1 &#8743; P2 &#8743; ... &#8743; Pn &rarr; Q)] &hArr; 1</RightWordItalic>
-                                </RightP>
-                                <RightP><RightWordBold>Cách 2: Dòng suy diễn</RightWordBold></RightP>
-                                <RightP className="text-center"> 
-                                    <RightWordItalic> (P1 &#8743; P2 &#8743; ... &#8743; Pn) &rarr; Q</RightWordItalic></RightP>
-                                <RightP><RightWordBold>Cách 3: Mô hình suy diễn</RightWordBold></RightP>
-                                <RightP className="text-center"> 
-                                    <RightWordItalic>
-                                        P1 <br/>
-                                        P2 <br/>
-                                        &#8285; <br/>
-                                        Pn <br/>
-                                        &mdash; <br/>
-                                        Q
-                                    </RightWordItalic></RightP>
-                                <RightP>Các biểu thức logic <RightWordItalic>P1, P2,…,Pn</RightWordItalic> được gọi là giả thiết (hay tiên đề), biểu thức <RightWordItalic>Q</RightWordItalic> được gọi là kết luận.</RightP>
-                            <RightH3 id="3_2">3.2 Quy tắc khẳng định<br/>(Modus Ponens)</RightH3>
-                                <Div className="d-flex justify-content-between align-items-center">
-                                    <RightP>[(p &rarr; q) &#8743; p] &rArr; q</RightP>
-                                    <Image src={require('../../images/modus_ponens.jpg').default} />
-                                </Div>
+                                <RightP>Quan hệ R trên tập A được gọi là quan hệ thứ tự nếu và chỉ nếu nó có tính chất phản xạ, phản xứng và bắc cầu.<br/>
+                                Ta thường kí hiệu quan hệ thứ tự bởi ≺.<br/>
+                                Cặp (A, ≺) được gọi là tập sắp thứ tự (tập được sắp) hay poset.</RightP>
+                                <RightWordBold className="ml-5">Ví dụ: </RightWordBold>
+                                <RightP>Quan hệ ước số “ | ”trên tập số nguyên dương là quan hệ thứ tự, nghĩa là (Z<sup>+</sup>, | ) là poset</RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/3_1_1.png').default} />
+                                <RightP>- (Z<sup>+</sup>, | ) là poset ? &rArr; không phải</RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/3_1_2.png').default} />
+                                <RightP>- (P(S), &sube; ), ở đây P(S) là tập hợp các con của S, là một poset?</RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/3_1_3.png').default} />
+                                {/* <RightP></RightP> */}
+                            <RightH3 id="3_2">3.2 Thứ tự toàn phần và bán phần</RightH3>
+                                <RightP>Định nghĩa. Các phần tử a và b của poset (S, ≺) gọi là so sánh được nếu a ≺ b hoặc b ≺ a. <br/>
+                                Trái lại thì ta nói a và b không so sánh được.<br/>
+                                Cho (S, ≺). Nếu hai phần tử tùy ý của S đều so sánh được với nhau thì ta gọi (S, ≺) là tập sắp thự tự toàn phần.<br/>
+                                Ta cũng nói rằng ≺ là thứ tự toàn phần hay thứ tự tuyến tính trên S.<br/>
+                                Trái lại thì ta nói ≺ là thứ tự bán phần.</RightP>
                                 <RightP><RightWordBold>Ví dụ:</RightWordBold></RightP>
+                                <RightP>- Quan hệ “≤ ” trên tập số Z+ là thứ tự toàn phần.<br/>
+                                - Quan hệ ước số “ | ”trên tập hợp số Z<sup>+</sup> không là thứ tự toàn phần, vì các số 5 và 7 là không so sánh được.<br/>
+                                - Với tập A cho trước, tập P(A) tất cả các tập con của A với quan hệ &sube; là một tập được sắp, nhưng không toàn phần khi A có nhiều hơn một phần tử.</RightP>
+                                {/* <RightP></RightP> */}
+                            <RightH3 id="3_3">3.3 Biểu đồ Hasse</RightH3>
+                                <RightP>Mỗi poset có thể biểu diễn bởi 1 đồ thị đặc biệt ta gọi là biểu đồ Hasse.<br/>
+                                Để định nghĩa biểu đồ Hasse chúng ta cần các khái niệm phần tử trội và trội trực tiếp.</RightP>
+                                <RightP><RightWordBold>Định nghĩa:</RightWordBold></RightP>
+                                <RightP>- Phần tử b có trong poset (S, ) được gọi là phần tử trội của phần tử a trong S nếu a ≺ b.<br/>
+                                - Chúng ta cũng nói rằng a là được trội bởi b. Phần tử b được gọi là trội trực tiếp của a nếu b là trội của a và không tồn tại c sao cho:  a ≺ c ≺ b, a ≠ c ≠ b.<br/>
+                                Ta định nghĩa biểu đồ Hasse của poset (S, ≺) là đồ thị:<br/>
+                                - Mỗi phần tử của S được biểu diễn bởi 1 điểm trên mặt phẳng.<br/>
+                                - Nếu b là trội trực tiếp của a thì sẽ vẽ 1 cung đi từ a đến b.</RightP>
                                 <Div className="d-flex justify-content-between align-items-center">
-                                    <Div>
-                                    <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Học tốt thi đậu</RightP>
-                                    <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Sinh viên A học tốt</RightP>
-                                    </Div>
-                                    <RightP>Suy ra: Sinh viên A  thi đậu</RightP>
+                                    <Image style={{marginLeft: "80px", width: "50%"}} src={require('../../images/quanhe/3_3_1.png').default} />
+                                    <RightP>a ≺ b ≺ d,  a ≺ c</RightP>
                                 </Div>
+                                <RightP>Biểu đồ Hasse của poset ({1, 2, 3, 4}, ≤) có thể vẽ như sau: </RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/3_3_2.png').default} />
+                                <RightP>Biểu đồ Hasse của P({'{'}a,b,c{'}'}): </RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/3_3_3.png').default} />
+                            <RightH3 id="3_4">3.4 Phần tử nhỏ nhất, lớn nhất</RightH3>
+                                <RightP><RightWordBold>Định nghĩa:</RightWordBold>
+                                Một phần tử a trong tập sắp thứ tự (S, ≺) được gọi là:</RightP>
+                                <RightP>- <RightWordItalic>Phần tử nhỏ nhất</RightWordItalic> nếu &forall; x &isin; S ta có a ≺ x.<br/>
+                                - <RightWordItalic>Phần tử lớn nhất</RightWordItalic> nếu &forall; x &isin; S ta có x ≺ a.</RightP>
+                                <RightP><RightWordBold>Nhận xét:</RightWordBold>
+                                Phần tử nhỏ nhất (lớn nhất) của một tập hợp (nếu có) là duy nhất. Ta kí hiệu phần tử của tập hợp S là min(S), và kí hiệu phần tử lớn nhất của S là max(S).</RightP>
+                                <RightP><RightWordBold>Ví dụ:</RightWordBold>
+                                Trong tập có thứ tự (S, &le;), S = {'{'}m &isin; Z | m^2 &lt; 100 {'}'} có<br/> 
+                                min(S) = -9, max(S) = 9.<br/>
+                                Trong tập có thứ tự (A, &le;), A={'{'}x &isin; R | x^2 &lt; 100 {'}'} không có phần tử nhỏ nhất và cũng không có phần tử lớn nhất.<br/>
+                                Cho tập B, ta biết (P(B), &sub;) là tập có thứ tự. Với thứ tự này thì min(P(B)) = &empty;, max(P(B)) = B.</RightP>
+                                <RightP><RightWordBold>Định nghĩa: (Thứ tự tốt)</RightWordBold></RightP>
+                                <RightP><RightWordBold>Ví dụ:</RightWordBold>
+                                - Tập hợp có thứ tự (N, &le;) là một tập hợp được sắp tốt.<br/>
+                                - Tập hợp có thứ tự (Z, &le;) không phải là một tập hợp được sắp tốt vì Z không có phần tử nhỏ nhất.</RightP>
+                            <RightH3 id="3_5">3.5 Phần tử tối thiểu, tối đại</RightH3>
+                                <RightP><RightWordBold>Định nghĩa: </RightWordBold>
+                                Một phần tử a trong tập sắp thứ tự (S, ≺) được gọi là:<br/>
+                                - <RightWordItalic>Phần tử tối tiểu</RightWordItalic> nếu không tồn tại x &isin; S sao cho x &ne; a và x ≺ a.<br/>
+                                - <RightWordItalic>Phần tử tối đại</RightWordItalic> nếu không tồn tại x &isin; S sao cho x &ne; a và a ≺ x.</RightP>
+                                <RightP><RightWordBold>Nhận xét:</RightWordBold>
+                                Phần tử tối tiểu (tối đại) của một tập có thứ tự không nhất thiết là duy nhất.</RightP>
+                                <RightP><RightWordBold>Ví dụ:</RightWordBold>
+                                Xét tập S = {'{'}1, 2, 3{'}'} với quan hệ R cho bởi R = {'{'}(1,1), (2,2), (3,3), (1,2), (3,2){'}'}. Dễ dàng kiểm chứng rằng (S,R) là tập có thứ tự. Với thứ tự R này, S có hai phần tử tối tiểu là 1 và 3.<br/>
+                                - Phần tử lớn nhất (nhỏ nhất) của một tập có thứ tự, nếu có, là phần tử tối đại (tối tiểu) duy nhất của tập hợp đó.</RightP>
+                                <RightP><RightWordBold>Ví dụ:</RightWordBold>
+                                Xét poset có biểu đồ Hasse dưới đây:</RightP>
                                 <Div className="d-flex justify-content-between align-items-center">
-                                    <Div>
-                                    <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Nếu chuồn chuồn bay thấp thì mưa</RightP>
-                                    <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Thấy chuồn chuồn bay thấp</RightP>
-                                    </Div>
-                                    <RightP>Suy ra: trời mưa</RightP>
+                                    <Image style={{marginLeft: "80px", width: "50%"}} src={require('../../images/quanhe/3_5_1.png').default} />
+                                    <RightP>Mỗi đỉnh màu đỏ là <RightWordBold>tối đại</RightWordBold>.<br/>
+                                    Mỗi đỉnh màu xanh là <RightWordBold>tối tiểu</RightWordBold>.<br/>
+                                    Không có cung nào xuất phát từ điểm tối đại.<br/>
+                                    Không có cung nào kết thúc ở điểm tối tiểu.</RightP>
                                 </Div>
-                                <RightP></RightP>
-                            <RightH3 id="3_3">3.3 Quy tắc phủ định<br/>(Modus Tollens)</RightH3>
-                                <Div className="d-flex justify-content-between align-items-center">
-                                    <RightP>[(p &rarr; q) &#8743; &#8514;q] &rArr; &#8514;p</RightP>
-                                    <Image src={require('../../images/modus_tollens.jpg').default} />
-                                </Div>
-                                <RightP><RightWordBold>Ví dụ:</RightWordBold></RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Nếu A đi học đầy đủ thì A đậu toán rời rạc.</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>A không đậu toán rời rạc.</RightP>     
-                                <RightP style={{marginLeft: '150px'}}>Suy ra: A không đi học đầy đủ.</RightP>
-                            <RightH3 id="3_4">3.4 Quy tắc tam đoạn luận</RightH3>
-                                <Div className="d-flex justify-content-between align-items-center">
-                                    <RightP>[(p &rarr; q) &#8743; (q &rarr; r)] &rArr; (p &rarr; r)</RightP>
-                                    <Image src={require('../../images/tamdoanluan.jpg').default} />
-                                </Div>
-                                <RightP><RightWordBold>Ví dụ:</RightWordBold></RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Nếu trời mưa thì đường ướt</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Nếu đường ướt thì đường trơn</RightP>     
-                                <RightP style={{marginLeft: '150px'}}>Suy ra: nếu trời mưa thì đường trơn.</RightP>
-                            <RightH3 id="3_5">3.5 Quy tắc phản chứng</RightH3>
-                                <RightP className="text-center">(p &rarr; q) &hArr; [(p &#8743; &#8514;q) &rarr; 0]</RightP>
-                                <RightP><RightWordBold>Tổng quát:</RightWordBold></RightP>
-                                <RightP><RightWordItalic>[(P1 &#8743; P2 &#8743; ... &#8743; Pn) &rarr; Q] &hArr; [(P1 &#8743; P2 &#8743; ... &#8743; Pn &#8743; &#8514;Q) &rarr; 0]</RightWordItalic></RightP>
-                                <RightP>Để chứng minh vế trái là một hằng đúng, ta chứng minh nếu thêm phủ định của q vào các tiên đề thì được một mâu thuẫn.</RightP>
-                                <Div className="d-flex justify-content-between" style={{width: '100%'}}>
-                                    <RightP><RightWordBold>Ví dụ:</RightWordBold></RightP>
-                                    <Image style={{width: '35%'}} src={require('../../images/phanchung1.jpg').default} />
-                                    <Image style={{width: '35%'}} src={require('../../images/phanchung2.jpg').default} />
-                                </Div>
-                            <RightH3 id="3_6">3.6 Quy tắc chứng minh theo trường hợp</RightH3>
-                                <RightP className="text-center">[(p &rarr; r) &#8743; (q &rarr; r)] &rArr; [(p &#8744; q) &rarr; r]</RightP>
-                                <RightP><RightWordBold>Tổng quát:</RightWordBold></RightP>
-                                <RightP className="text-center"><RightWordItalic>[(P1 &rarr; Q) &#8743; (P2 &rarr; Q) &#8743; ... &#8743; (Pn &rarr; Q)] &rArr; [(P1 &#8744; P2 &#8744; ... &#8744; Pn) &rarr; Q]</RightWordItalic></RightP>
-                            <RightH3 id="3_7">3.7 Quy tắc phản ví dụ</RightH3>
-                                <RightP>Để chứng minh một phép suy luận là sai hay không là một hằng đúng, ta chỉ cần chỉ ra một phản ví dụ.</RightP>
-                                <RightP>Để tìm một phản ví dụ ta chỉ cần chỉ ra một trường hợp về chân trị của các biến mệnh đề sao cho các tiên đề trong phép suy luận là đúng còn kết luận là sai.</RightP>
-                                <RightP><RightWordBold>Ví dụ:</RightWordBold> Hãy kiểm tra suy luận:</RightP>
-                                <RightP className="text-center"><RightWordItalic>
-                                    p &rarr; r <br/>
-                                    p <br/>
-                                    &#8514;r &rarr; q <br/>
-                                    &mdash;&mdash;&mdash;&mdash; <br/>
-                                    &#8278;q
-                                    </RightWordItalic></RightP>
-                                <RightP>Nhận xét: Ta sẽ tìm thấy p, q, r thỏa</RightP>
-                                <RightP className="text-center"><RightWordItalic>
-                                    p &rarr; r = 1<br/>
-                                    p = 1<br/>
-                                    &#8514;r &rarr; q = 1<br/>
-                                    &mdash;&mdash;&mdash;&mdash;&mdash; <br/>
-                                    &#8278;q = 0
-                                </RightWordItalic></RightP>
-                                <RightP>Dễ dàng tìm thấy một phản ví dụ:  p=1,q=0,r=1. <br/>Vậy suy luận đã cho là không đúng.</RightP>
-                                <RightP><RightWordBold>Ví dụ: </RightWordBold>Ông Minh nói rằng nếu không được tăng lương thì ông ta sẽ nghỉ việc. Mặt khác, nếu ông ấy nghỉ việc và vợ ông ấy bị mất việc thì phải bán xe.Biết rằng nếu vợ ông Minh hay  đi làm trễ thì trước sau gì cũng sẽ bị mất việc và cuối cùng ông Minh đã được tăng lương. <br/>Suy ra nếu ông Minh không bán xe thì vợ ông ta đã không đi làm trễ.</RightP>
-                                <Div className="d-flex justify-content-between align-items-center">
-                                    <Div>
-                                        <RightP>p: ông Minh được tăng lương. <br/>
-                                        q: ông Minh nghỉ việc.<br/>
-                                        r: vợ ông Minh mất việc.<br/>
-                                        s: gia đình phải bán xe.<br/>
-                                        t: vợ ông hay đi làm trể. </RightP>
-                                    </Div>
-                                    <Image src={require('../../images/phanvidu.jpg').default}/>
-                                </Div>
+                                <RightP><RightWordBold>Chú ý: Trong một poset S hữu hạn, phần tử tối tiểu và phần tử tối đại luôn luôn tồn tại.</RightWordBold></RightP>
+                                <RightP>- Thật vậy, chúng ta xuất phát từ điểm bất kỳ a<sub>0</sub> &isin; S. Nếu a<sub>0</sub> không là phần tử tối tiểu thì &exist; a<sub>1</sub> &isin; S: a<sub>1</sub> ≺ a<sub>0</sub> . Tiếp tục  như vậy cho đến khi tìm được phần tử tối tiểu.<br/> 
+                                - Phần tử tối đại cũng tìm được bằng phương pháp tương tự.</RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/3_5_2.png').default} />
 
-                    </Div>
-                    {/* Vị từ lượng từ */}
-                    <Div>
-                        <RightH2 id="4">4. Vị từ, Lượng từ</RightH2>
-                            <RightH3 id="4_1">4.1 Định nghĩa</RightH3>
-                                <RightP>Vị từ là một khẳng định p(x,y,..), trong đó x,y...là các biến thuộc tập hợp A, B,.. cho trước sao cho: <br/>
-                                - Bản thân p(x,y,..) không phải là mệnh đề.<br/>
-                                - Nếu thay x,y,.. thành giá trị cụ thể thì p(x,y,..) là mệnh đề.</RightP>
-                                <RightP><RightWordBold>Ví dụ:</RightWordBold> <br/>
-                                - p(n) =  “n +1 là số nguyên tố” <br/>
-                                - q(x,y) = “x + y = 1”</RightP>
-                            <RightH3 id="4_2">4.2 Các phép toán trên vị từ</RightH3>
-                                <RightP>Cho trước các vị từ p(x), q(x) theo một biến xA. Khi ấy, ta cũng có các phép toán tương ứng như trên mệnh đề: </RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Phủ định: &#8514;p(x)</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Phép nối liền: p(x) &#8743; q(x)</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Phép nối rời: p(x) &#8744; q(x)</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Phép kéo theo: p(x) &rarr; q(x)</RightP>
-                                <RightP><FaCircle style={{fontSize: '10px', marginRight: '10px', marginLeft: '30px'}}/>Phép kéo theo hao chiều: p(x) &harr; q(x)</RightP>
-                                <RightP>
-                                Cho p(x) là một vị từ theo một biến xác định trên A. Các mệnh đề lượng từ hóa của p(x) được định nghĩa như sau: <br/>
-                                - Mệnh đề “Với mọi x thuộc A, p(x) ”, kí hiệu: “&forall;x &isin; A, p(x)” là mệnh đề đúng khi và chỉ khi p(a) luôn đúng với mọi giá trị a &isin; A. &forall; đgl lượng từ phổ dụng.<br/>
-                                - Mệnh đề “Tồn tại (có ít nhất một) x thuộc A, p(x)” kí hiệu “&exist;x &isin; A, p(x)” là mệnh đề đúng khi và chỉ khi có ít nhất một giá trị x = a’&isin; A nào đó sao cho mệnh đề p(a’) đúng. &exist; đgl lượng từ tồn tại.
-                                </RightP>
-                                <RightP>
-                                Cho p(x, y) là một vị từ theo hai biến x, y xác định trên AxB. Ta định nghĩa các mệnh đề lượng từ hóa của p(x, y) như sau: </RightP>
-                                <RightP className="text-center">
-                                “&forall;x&isin;A, &forall;y&isin;B, p(x, y)” &equiv; “&forall;x&isin;A, (&forall;y&isin;B, p(x, y))” <br/>
-                                “&forall;x&isin;A, &exist;y&isin;B, p(x, y)” &equiv; “&forall;x&isin;A, (&exist;y&isin;B, p(x, y))”<br/>
-                                “&exist;x&isin;A, &forall;y&isin;B, p(x, y)” &equiv; “&exist;x&isin;A, (&forall;y&isin;B, p(x, y))”<br/>
-                                “&exist;x&isin;A, &exist;y&isin;B, p(x, y)” &equiv; “&exist;x&isin;A, (&exist;y&isin;B, p(x, y))”
-                                </RightP>
-                            <RightH3 id="4_3">4.3 Định lý</RightH3>
-                                <RightP>Cho p(x, y) là một vị từ theo hai biến x, y xác định trên AxB. Khi đó:</RightP>
-                                <RightP className="text-center">
-                                “&forall;x&isin;A, &forall;y&isin;B, p(x, y)” &hArr; “&forall;y&isin;B, &forall;x&isin;A, p(x, y)” <br/>
-                                “&exist;x&isin;A, &exist;y&isin;B, p(x, y)” &hArr; “&exist;y&isin;B, &exist;x&isin;A, p(x, y)” <br/>
-                                “&exist;x&isin;A, &forall;y&isin;B, p(x, y)” &hArr; “&forall;y&isin;B, &exist;x&isin;A, p(x, y)”
-                                </RightP>
-                                <RightP>Phủ định của mệnh đề lượng từ hóa vị từ p(x,y,..) có được bằng cách: thay &forall; thành &exist;, thay &exist; thành &forall;, và p(x,y,..) thành &#8514;p(x,y,..).</RightP>
-                                <Div style={{width: '100%'}}>
-                                    <RightP>Với vị từ theo 1 biến ta có: </RightP>
-                                    <Image style={{width: '85%', marginLeft: '90px'}} src={require('../../images/ltvt1.jpg').default} />
-                                </Div>
-                                <Div style={{width: '100%'}}>
-                                    <RightP>Với vị từ theo 2 biến ta có: </RightP>
-                                    <Image style={{width: '85%', marginLeft: '90px'}} src={require('../../images/ltvt2.jpg').default} />
-                                </Div>
+                                <RightP><RightWordBold>Ví dụ. Tìm phần tử tối đại, tối tiểu của poset ({'{'}2, 4, 5, 10, 12, 20, 25{'}'}, | ) ?</RightWordBold></RightP>
+                                <RightP><RightWordBold>Giải: </RightWordBold>Từ biểu đồ Hasse, chúng ta thấy rằng 12, 20, 25 là các phần tử tối đại, còn 2, 5 là các phần tử tối tiểu. <br/>
+                                - Như vậy phần tử tối đại, tối tiểu của poset có thể không duy nhất.</RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/3_5_3.png').default} />
+
+                                <RightP><RightWordBold>Ví dụ: Tìm phần tử tối đại, tối tiểu của poset các chuỗi bit độ dài 3?</RightWordBold></RightP>
+                                <RightP><RightWordBold>Giải: </RightWordBold>Từ biểu đồ Hasse, chúng ta thấy rằng 111 là phần tử tối đại duy nhất và 000 là phần tử tối tiểu duy nhất.</RightP>
+                                <Image style={{marginLeft: "80px"}} src={require('../../images/quanhe/3_5_4.png').default} />
+                                <RightP>111 là phần tử lớn nhất và 000 là phần tử nhỏ nhất theo nghĩa:<RightWordBold>000 ≺ abc ≺ 111 </RightWordBold>với mọi chuỗi abc.</RightP>
                     </Div>
                 </RightColumn>
             </Container>
