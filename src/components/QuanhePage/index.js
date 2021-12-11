@@ -118,7 +118,7 @@ const QuanhePage = () => {
                 {/* Right Column */}
                 <RightColumn>
                     <Title>Quan hệ</Title>
-                    {/* Mệnh đề Logic */}
+                    {/* Quan hệ hai ngôi */}
                     <Div id="1">
                         <RightH2>1. Quan hệ hai ngôi</RightH2>
                             <RightH3 id="1_1">1.1 Định nghĩa</RightH3>
@@ -141,7 +141,7 @@ const QuanhePage = () => {
                                     - Quan hệ  ≤  trên Z phản xạ vì a  ≤  a, &forall; a &isin; Z. <br/>
                                     - Quan hệ &gt; trên Z không phản xạ vì 1 không lớn hơn 1. <br/>
                                     - Quan hệ “ | ” (“ước số”) trên Z+ là phản xạ vì mọi số nguyên dương a là ước của chính nó.</RightP>
-                                <RightH4 id="1_2_b">b. b)	Tính đối xứng, phản xứng</RightH4>
+                                <RightH4 id="1_2_b">b. Tính đối xứng, phản xứng</RightH4>
                                     <RightP>Giả sử R là một quan hệ hai ngôi trên tập A. <br/>
                                     - Ta nói quan hệ R có tính đối xứng nếu và chỉ nếu a R b &rArr; b R a , &forall; a, b &isin; A. <br/>
                                     - Ta nói quan hệ R có tính phản xứng nếu và chỉ nếu (a R b &and;  b R a) &rArr; a = b ,  &forall; a, b &isin; A.</RightP>

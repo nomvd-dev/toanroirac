@@ -37,7 +37,7 @@ export const LeftColumn = styled.div`
     flex-direction: column;
     height: 600px;
     overflow: auto;
-    top: 150px;
+    top: 120px;
     &::-webkit-scrollbar {
         width: 12px;
     }
@@ -137,4 +137,7 @@ export const RightWordBold = styled.span`
 `
 export const RightWordItalic = styled.span`
     font-style: italic;
+`
+export const RightWordNot = styled.span`
+    border-top: 1px solid #000;
 `

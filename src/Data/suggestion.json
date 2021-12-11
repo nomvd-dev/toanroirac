@@ -1,4 +1,244 @@
 [
-    {"keyword":"mệnh đề"},
-    {"keyword":"logic"}
+    {
+        "keyword": "mệnh đề",
+        "id": "1"
+    },
+    {
+        "keyword": "phân loại mệnh đề",
+        "id": "2"
+    },
+    {
+        "keyword": "phức hợp",
+        "id": "3"
+    },
+    {
+        "keyword": "sơ cấp",
+        "id": "4"
+    },
+    {
+        "keyword": "phép phủ định",
+        "id": "5"
+    },
+    {
+        "keyword": "phép hội",
+        "id": "6"
+    },
+    {
+        "keyword": "phép tuyển",
+        "id": "7"
+    },
+    {
+        "keyword": "phép kéo theo",
+        "id": "8"
+    },
+    {
+        "keyword": "phép kéo theo hai chiều",
+        "id": "9"
+    },
+    {
+        "keyword": "biểu thức logic",
+        "id": "10"
+    },
+    {
+        "keyword": "độ ưu tiên và bảng chân trị",
+        "id": "11"
+    },
+    {
+        "keyword": "tương đương logic",
+        "id": "12"
+    },
+    {
+        "keyword": "các luật logic",
+        "id": "13"
+    },
+    {
+        "keyword": "quy tắc suy diễn",
+        "id": "14"
+    },
+    {
+        "keyword": "quy tắc khẳng định",
+        "id": "15"
+    },
+    {
+        "keyword": "quy tắc phủ định",
+        "id": "16"
+    },
+    {
+        "keyword": "quy tắc tam đoạn luân",
+        "id": "17"
+    },
+    {
+        "keyword": "quy tắc phản chứng",
+        "id": "18"
+    },
+    {
+        "keyword": "quy tắc chứng minh theo trường hợp",
+        "id": "19"
+    },
+    {
+        "keyword": "quy tắc phản ví dụ",
+        "id": "20"
+    },
+    {
+        "keyword": "vị từ, lượng từ",
+        "id": "21"
+    },
+    {
+        "keyword": "các phép toán logic",
+        "id": "22"
+    },
+    {
+        "keyword": "các phép toán trên vị từ",
+        "id": "23"
+    },
+    {
+        "keyword": "định lý vị từ, lượng từ",
+        "id": "24"
+    },
+    
+    {
+        "keyword": "quan hệ hai ngôi",
+        "id": "25"
+    },
+    {
+        "keyword": "tính chất quan hệ hai ngôi",
+        "id": "60"
+    },
+    {
+        "keyword": "tính phản xạ",
+        "id": "26"
+    },
+    {
+        "keyword": "tính đối xứng, phản xứng",
+        "id": "27"
+    },
+    {
+        "keyword": "tính bắc cầu",
+        "id": "28"
+    },
+    {
+        "keyword": "biểu diễn quan hệ",
+        "id": "29"
+    },
+    {
+        "keyword": "quan hê tương đương",
+        "id": "30"
+    },
+    {
+        "keyword": "lớp tương đương",
+        "id": "31"
+    },
+    {
+        "keyword": "sư phân hoạch các lớp tương đương",
+        "id": "32"
+    },
+    {
+        "keyword": "quan hệ thứ tự",
+        "id": "33"
+    },
+    {
+        "keyword": "thứ tự toàn phần, bán phần",
+        "id": "34"
+    },
+    {
+        "keyword": "biểu đồ hasse",
+        "id": "35"
+    },
+    {
+        "keyword": "phần tử nhỏ nhất, lớn nhất",
+        "id": "36"
+    },
+    {
+        "keyword": "phần tử tối thiểu, tối đại",
+        "id": "37"
+    },
+
+    {
+        "keyword": "đại số logic b",
+        "id": "38"
+    },
+    {
+        "keyword": "một số phép toán hai ngôi",
+        "id": "39"
+    },
+    {
+        "keyword": "phép toán hai ngôi",
+        "id": "39"
+    },
+    {
+        "keyword": "đại số boole",
+        "id": "41"
+    },
+    {
+        "keyword": "các phép toán logic trong đại số boole",
+        "id": "42"
+    },
+    {
+        "keyword": "hàm boole",
+        "id": "43"
+    },
+    {
+        "keyword": "tích sơ cấp",
+        "id": "44"
+    },
+    {
+        "keyword": "các phép toán trên hàm boole",
+        "id": "44"
+    },
+    {
+        "keyword": "biểu thức boole",
+        "id": "46"
+    },
+    {
+        "keyword": "dạng nối rời chính tắc",
+        "id": "47"
+    },
+    {
+        "keyword": "công thức đa thức tối thiểu",
+        "id": "48"
+    },
+    {
+        "keyword": "biểu đồ karnaugh của hàm boole",
+        "id": "49"
+    },
+    {
+        "keyword": "bản đồ karnaugh",
+        "id": "50"
+    },
+    {
+        "keyword": "biểu đồ karbaugh",
+        "id": "50"
+    },
+    {
+        "keyword": "karnaugh hai biến",
+        "id": "52"
+    },
+    {
+        "keyword": "karnaugh ba biến",
+        "id": "53"
+    },
+    {
+        "keyword": "karnaugh bốn biến",
+        "id": "54"
+    },
+    {
+        "keyword": "thuật toán tìm công thức đa thức tối thiểu",
+        "id": "55"
+    },
+    {
+        "keyword": "phương pháp quine - mccluskey",
+        "id": "56"
+    },
+    {
+        "keyword": "dạng tổng chuẩn tắc thu gọn",
+        "id": "57"
+    },
+    {
+        "keyword": "dạng tổng chuẩn tắc tối thiểu",
+        "id": "58"
+    },
+    {
+        "keyword": "các cổng logic",
+        "id": "59"
+    }
 ]
