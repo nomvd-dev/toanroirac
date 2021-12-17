@@ -7,6 +7,7 @@ import Logic from './pages/Logic';
 import Quanhe from './pages/Quanhe';
 import Search from './pages/Search';
 import Boole from './pages/Boole';
+import BaiTap from './pages/BaiTap';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/toanroirac/logic" component={Logic} />
         <Route path="/toanroirac/quanhe" component={Quanhe} />
         <Route path="/toanroirac/boole" component={Boole} />
+        <Route path="/toanroirac/baitap" component={BaiTap} />
         <Route path="/toanroirac/search" component={Search} />
         <Route path="/toanroirac" component={Home} />
       </Switch>

@@ -1354,6 +1354,15 @@ export const DaiSoLogicB = () => {
                     trong đó x, y &isin; B gọi là các biến logic hoặc biến Boole.</RightP>
                 <Image style={{ marginLeft: "80px" }} src={require('../../images/boole/1.png').default} />
             </Div>
+            <Div>
+                <RightH2>Bài Tập</RightH2>
+                <RightP>Cho D<sub>70</sub>={'{'} 1, 2, 5, 7, 10, 14, 35, 70 {'}'} là tập hợp các ước dương của 70. Trên D<sub>70</sub> ta trang bị các phép toán như sau:<br />
+                    - a + b = LCM(a, b): BCNN của a và b<br />
+                    - a * b = GCD(a, b): UCLN của a và b<br />
+                    - a' = 70/a<br />
+                    a. CMR: D<sub>70</sub> là một đại số Bool.<br />
+                    b. Xét 2 tập con của D<sub>70</sub> : X={'{'} 1, 5, 10, 70 {'}'} và Y={'{'} 1, 2, 35, 70 {'}'}. Khi đó X, Y có phải là các đại số con của D<sub>70</sub> hay không? Vì sao?</RightP>
+            </Div>
         </>
     )
 }
@@ -1411,6 +1420,13 @@ export const DaiSoBoole = () => {
                     a &and; <span style={{ borderTop: "1px solid #000" }}>a</span> = 0<br />
                     a &or; <span style={{ borderTop: "1px solid #000" }}>a</span> = 1</RightP>
                 <Image style={{ marginLeft: "80px" }} src={require('../../images/boole/3_2.png').default} />
+            </Div>
+            <Div>
+                <RightH2>Bài Tập</RightH2>
+                <RightP>
+                    Tìm các biểu thức Bool biểu diễn các hàm F(x, y, z) và G(x, y, z) với bảng chân trị sau :<br />
+                    <Image style={{ marginLeft: "80px" }} src={require('../../images/boole_baitap/2.png').default} />
+                </RightP>
             </Div>
         </>
     )
@@ -1691,6 +1707,20 @@ export const CongThucDaThucToiThieu = () => {
             <Image style={{ marginLeft: "80px" }} src={require('../../images/boole/5_2_1.png').default} />
             <RightH3 id="5_3">5.3 Công thức đa thức tối thiểu</RightH3>
             <RightP>Công thức F của hàm Boole f được gọi là <RightWordBold>Công thức đa thức tối tiểu</RightWordBold> nếu với bất kỳ công thức G của f mà đơn giản hơn F thì F và G đơn giản như nhau.</RightP>
+            <Div>
+                <RightH2>Bài Tập</RightH2>
+                <RightP>
+                    Tìm công thức đa thức tối thiểu của các hàm sau<br />
+                </RightP>
+                <RightP className='ml-5'>
+                    a. F = xyz + xy<span className="overline">z</span> + <span className='overline'>x</span>yz + <span className='overline'>x</span>y<span className='overline'>z</span><br />
+                    b. F = x<span className='overline'>y</span>z + xy<span className='overline'>z</span> + x<span className='overline'>yz</span> + xy<br />
+                    c. F = <span className='overline'>x</span>y + x<span className='overline'>y</span> + xy + <span className='overline'>xy</span><br />
+                    d. F = (y + <span className='overline'>z</span>)(<span className='overline'>y</span> + z) + <span className='overline'>x</span> + y + <span className='overline'>z</span><br />
+                    e. F = (x + <span className='overline'>y</span> + x<span className='overline'>y</span>)(xy + <span className='overline'>x</span>z + yz)<br />
+                    f. F = (<span className='overline'>x</span> + y)(x + y)
+                </RightP>
+            </Div>
         </>
     )
 }
@@ -1699,7 +1729,7 @@ export const BieuDoKarnaughCuaHamBoole = () => {
     return (
         <>
             <RightH2 id="6">Biểu đồ Karnaugh của hàm boole</RightH2>
-            <RightH3 id="6_1">1. Bản đồ Karnaugh</RightH3>
+            <RightH3 id="6_1">1. Biểu đồ Karnaugh</RightH3>
             <RightP>Sử dụng bảng Karnaugh là phương pháp xác định công thức đa thức tối tiểu.<br />
                 Quy tắc gom nhóm:<br />
                 - Gom các tiểu hạng mang biểu diễn là số 1.<br />
@@ -1710,8 +1740,8 @@ export const BieuDoKarnaughCuaHamBoole = () => {
             <RightP>
                 - Đối với hàm boole hai biến x, y:<br />
                 - Bảng karnaugh 2 biến có 4 ô vuông, trong đó:</RightP>
-            <Div className="d-flex justify-content-between">
-                <Image src={require('../../images/boole/6_2_1.png').default} />
+            <Div className="d-flex justify-content-between align-items-center">
+                <Image style={{marginLeft: "80px"}} src={require('../../images/boole/6_2_1.png').default} />
                 <RightP>
                     - Ô được đánh số 1 để biểu diễn tiểu hạng có mặt trong hàm.<br />
                     - Các ô được cho là liền nhau nếu các tiểu hạng mà chúng biểu diễn chỉ khác nhau 1 biến.</RightP>
@@ -1851,6 +1881,27 @@ export const BieuDoKarnaughCuaHamBoole = () => {
                 - Ta thấy 2 công thức đơn giản như nhau cho nên công thức đa thức tối thiểu của hàm f là:<br />
                 + <RightWordNot>z</RightWordNot>t &or; <RightWordNot>x</RightWordNot><RightWordNot>t</RightWordNot> &or; xzt &or; <RightWordNot>x</RightWordNot><RightWordNot>y</RightWordNot>z<br />
                 + <RightWordNot>z</RightWordNot>t &or; <RightWordNot>x</RightWordNot><RightWordNot>t</RightWordNot> &or; xzt &or; <RightWordNot>y</RightWordNot>zt</RightP>
+            <Div>
+                <RightH2>Bài Tập</RightH2>
+                <RightP>
+                    Dùng phương pháp Karnaugh tối thiểu hóa các hàm 3 biến sau:<br />
+                </RightP>
+                <RightP className='ml-5'>
+                    a. F = xyz + x<span className='overline'>y</span>z + <span className='overline'>x</span>yz + <span className='overline'>xy</span>z + <span className='overline'>xyz</span><br />
+                    b. F = x<span className='overline'>y</span> + xyz + xy<span className='overline'>z</span> + <span className='overline'>x</span>y<span className='overline'>z</span> + <span className='overline'>xyz</span><br />
+                    c. F = xy<span className='overline'>z</span> + x<span className='overline'>y</span>z + x<span className='overline'>yz</span> + <span className='overline'>x</span>yz + <span className='overline'>xy</span>z<br />
+                    d. F = xyz + x<span className='overline'>y</span>z + x<span className='overline'>yz</span> + <span className='overline'>x</span>yz + <span className='overline'>x</span>y<span className='overline'>z</span> + <span className='overline'>xyz</span>
+                </RightP>
+                <RightP>
+                    Dùng phương pháp Karnaugh tối thiểu hóa các hàm 4 biến sau:<br />
+                </RightP>
+                <RightP className='ml-5'>
+                    a. F = wxyz + wx<span className='overline'>y</span>z + wx<span className='overline'>yz</span> + w<span className='overline'>x</span>y<span className='overline'>z</span> + w<span className='overline'>xy</span>z<br />
+                    b. F = wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>x</span>yz + <span className='overline'>w</span>x<span className='overline'>y</span>z + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z<br />
+                    c. F = wxyz + wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>xy</span>z + w<span className='overline'>xyz</span> + <span className='overline'>w</span>x<span className='overline'>y</span>z + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z<br />
+                    d. F = wxyz + wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>x</span>yz + w<span className='overline'>x</span>y<span className='overline'>z</span> + <span className='overline'>w</span>xyz + <span className='overline'>wx</span>yz + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z
+                </RightP>
+            </Div>
         </>
     )
 }
@@ -1858,7 +1909,7 @@ export const BieuDoKarnaughCuaHamBoole = () => {
 export const BanDoKarnaugh = () => {
     return (
         <>
-            <RightH3 id="6_1">Bản đồ Karnaugh</RightH3>
+            <RightH3 id="6_1">Biểu đồ Karnaugh</RightH3>
             <RightP>Sử dụng bảng Karnaugh là phương pháp xác định công thức đa thức tối tiểu.<br />
                 Quy tắc gom nhóm:<br />
                 - Gom các tiểu hạng mang biểu diễn là số 1.<br />
@@ -1913,6 +1964,18 @@ export const KarnaughBaBien = () => {
                 <RightWordNot>x</RightWordNot>y<RightWordNot>z</RightWordNot> +
                 <RightWordNot>x</RightWordNot><RightWordNot>y</RightWordNot><RightWordNot>z</RightWordNot></RightP>
             <Image style={{ marginLeft: "80px" }} src={require('../../images/boole/6_3_2.png').default} />
+            <Div>
+                <RightH2>Bài Tập</RightH2>
+                <RightP>
+                    Dùng phương pháp Karnaugh tối thiểu hóa các hàm 3 biến sau:<br />
+                </RightP>
+                <RightP className='ml-5'>
+                    a. F = xyz + x<span className='overline'>y</span>z + <span className='overline'>x</span>yz + <span className='overline'>xy</span>z + <span className='overline'>xyz</span><br />
+                    b. F = x<span className='overline'>y</span> + xyz + xy<span className='overline'>z</span> + <span className='overline'>x</span>y<span className='overline'>z</span> + <span className='overline'>xyz</span><br />
+                    c. F = xy<span className='overline'>z</span> + x<span className='overline'>y</span>z + x<span className='overline'>yz</span> + <span className='overline'>x</span>yz + <span className='overline'>xy</span>z<br />
+                    d. F = xyz + x<span className='overline'>y</span>z + x<span className='overline'>yz</span> + <span className='overline'>x</span>yz + <span className='overline'>x</span>y<span className='overline'>z</span> + <span className='overline'>xyz</span>
+                </RightP>
+            </Div>
         </>
     )
 }
@@ -1951,6 +2014,18 @@ export const KarnaughBonBien = () => {
                 - {'{'}A, B{'}'}, {'{'}C, D{'}'} là các phủ tối tiểu.<br />
                 - {'{'}A, C, D{'}'} phủ không tối tiểu.<br />
                 - {'{'}B, D{'}'} không phủ.</RightP>
+            <Div>
+                <RightH2>Bài Tập</RightH2>
+                <RightP>
+                    Dùng phương pháp Karnaugh tối thiểu hóa các hàm 4 biến sau:<br />
+                </RightP>
+                <RightP className='ml-5'>
+                    a. F = wxyz + wx<span className='overline'>y</span>z + wx<span className='overline'>yz</span> + w<span className='overline'>x</span>y<span className='overline'>z</span> + w<span className='overline'>xy</span>z<br />
+                    b. F = wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>x</span>yz + <span className='overline'>w</span>x<span className='overline'>y</span>z + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z<br />
+                    c. F = wxyz + wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>xy</span>z + w<span className='overline'>xyz</span> + <span className='overline'>w</span>x<span className='overline'>y</span>z + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z<br />
+                    d. F = wxyz + wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>x</span>yz + w<span className='overline'>x</span>y<span className='overline'>z</span> + <span className='overline'>w</span>xyz + <span className='overline'>wx</span>yz + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z
+                </RightP>
+            </Div>
         </>
     )
 }
@@ -2059,6 +2134,20 @@ export const QuineMcClusky = () => {
                 <RightWordBold>Bước 3:</RightWordBold> Trong bảng còn lại, xoá nốt những dòng không còn dấu + và sau đó nếu có hai cột giống nhau thì xoá bớt một cột. <br />
                 <RightWordBold>Bước 4:</RightWordBold> Sau các bước trên, tìm một hệ S các nguyên nhân nguyên tố với số biến ít nhất phủ các cột còn lại. </RightP>
             <Image style={{ marginLeft: "80px" }} src={require('../../images/boole/7_2.png').default} />
+            <Div>
+                <RightH2>Bài Tập</RightH2>
+                <RightP>
+                    Dùng phương pháp Quine-McClusKey tổi thiểu hóa các hàm sau<br />
+                </RightP>
+                <RightP className='ml-5'>
+                    a. F = xyz + <span className='overline'>x</span>yz + x<span className='overline'>yz</span> + x<span className='overline'>y</span>z<br />
+                    b. F = wxyz + wx<span className='overline'>y</span>z + wx<span className='overline'>yz</span> + w<span className='overline'>x</span>y<span className='overline'>z</span> + w<span className='overline'>xy</span>z<br />
+                    c. F = wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>x</span>yz + <span className='overline'>w</span>x<span className='overline'>y</span>z + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z<br />
+                    d. F = wxyz + wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>xy</span>z + w<span className='overline'>xyz</span> + <span className='overline'>w</span>x<span className='overline'>y</span>z + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z<br />
+                    e. F = wxyz + wxy<span className='overline'>z</span> + wx<span className='overline'>y</span>z + w<span className='overline'>x</span>yz + w<span className='overline'>x</span>y<span className='overline'>z</span> + <span className='overline'>w</span>xyz + <span className='overline'>wx</span>yz + <span className='overline'>wx</span>y<span className='overline'>z</span> + <span className='overline'>wxy</span>z<br />
+                    f. F = <span className='overline'>wxy</span>zt + <span className='overline'>w</span>x<span className='overline'>y</span>zt + <span className='overline'>wx</span>yzt + w<span className='overline'>xy</span>zt + w<span className='overline'>x</span>yzt + <span className='overline'>w</span>xyzt + wxyzt
+                </RightP>
+            </Div>
         </>
     )
 }
@@ -2155,6 +2244,30 @@ export const CacCongLogic = () => {
                 <RightP>- Ngoài ra, ta cũng có thể sử dụng cổng XOR cho bài toán như sau:</RightP>
                 <Image style={{ marginLeft: "80px" }} src={require('../../images/boole/8_11.png').default} />
                 <Image style={{ marginLeft: "80px" }} src={require('../../images/boole/8_12.png').default} />
+            </Div>
+            <Div>
+                <RightH2>Bài Tập</RightH2>
+                <RightP>
+                    Hãy vẽ mạch logic ứng với mỗi biểu thức Boole sau:<br />
+                </RightP>
+                <RightP className='ml-5'>
+                    a. A<span className='overline'>B</span> + AB<span className='overline'>C</span><br />
+                    b. <span className='overline'>A + BC</span> + B<br />
+                    c. <span className='overline'>AB</span> + <span className='overline'>A + C</span><br />
+                    d. (X + <span className='overline'>Y</span>)Z + <span className='overline'>X</span><br />
+                    e. <span className='overline'>X</span>(<span className='overline'>Y + Z</span>)
+                </RightP>
+                <RightP>
+                    Hãy xác định biểu thức Boole dành cho mỗi mạch ngắt chuyển như hình dưới đây:<br />
+                </RightP>
+                <Div>
+                    <RightP>a.</RightP>
+                    <Image style={{ marginLeft: "80px" }} src={require('../../images/boole_baitap/mach_a.jpg').default} />
+                </Div>
+                <Div>
+                    <RightP>b.</RightP>
+                    <Image style={{ marginLeft: "80px" }} src={require('../../images/boole_baitap/mach_b.jpg').default} />
+                </Div>
             </Div>
         </>
     )

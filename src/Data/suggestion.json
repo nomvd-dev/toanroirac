@@ -1,244 +1,299 @@
 [
     {
         "keyword": "mệnh đề",
-        "id": "1"
+        "id": "1",
+        "recommend": ["10", "14", "21"]
     },
     {
         "keyword": "phân loại mệnh đề",
-        "id": "2"
+        "id": "2",
+        "recommend": ["5", "6", "7", "8", "9"]
     },
     {
         "keyword": "phức hợp",
-        "id": "3"
+        "id": "3",
+        "recommend": ["4"]
     },
     {
         "keyword": "sơ cấp",
-        "id": "4"
+        "id": "4",
+        "recommend": ["3"]
     },
     {
         "keyword": "phép phủ định",
-        "id": "5"
+        "id": "5",
+        "recommend": ["6", "7", "8", "9"]
     },
     {
         "keyword": "phép hội",
-        "id": "6"
+        "id": "6",
+        "recommend": ["5", "7", "8", "9"]
     },
     {
         "keyword": "phép tuyển",
-        "id": "7"
+        "id": "7",
+        "recommend": ["5", "6", "8", "9"]
     },
     {
         "keyword": "phép kéo theo",
-        "id": "8"
+        "id": "8",
+        "recommend": ["5", "6", "7", "9"]
     },
     {
         "keyword": "phép kéo theo hai chiều",
-        "id": "9"
+        "id": "9",
+        "recommend": ["5", "6", "7", "8"]
     },
     {
         "keyword": "biểu thức logic",
-        "id": "10"
+        "id": "10",
+        "recommend": ["1", "14", "21"]
     },
     {
         "keyword": "độ ưu tiên và bảng chân trị",
-        "id": "11"
+        "id": "11",
+        "recommend": ["10", "12", "13"]
     },
     {
         "keyword": "tương đương logic",
-        "id": "12"
+        "id": "12",
+        "recommend": ["10", "11", "13"]
     },
     {
         "keyword": "các luật logic",
-        "id": "13"
+        "id": "13",
+        "recommend": ["10", "11", "12"]
     },
     {
         "keyword": "quy tắc suy diễn",
-        "id": "14"
+        "id": "14",
+        "recommend": ["1", "10", "21"]
     },
     {
         "keyword": "quy tắc khẳng định",
-        "id": "15"
+        "id": "15",
+        "recommend": ["16", "17", "18", "19", "20"]
     },
     {
         "keyword": "quy tắc phủ định",
-        "id": "16"
+        "id": "16",
+        "recommend": ["15", "17", "18", "19", "20"]
     },
     {
         "keyword": "quy tắc tam đoạn luân",
-        "id": "17"
+        "id": "17",
+        "recommend": ["15", "16", "18", "19", "20"]
     },
     {
         "keyword": "quy tắc phản chứng",
-        "id": "18"
+        "id": "18",
+        "recommend": ["15", "16", "17", "19", "20"]
     },
     {
         "keyword": "quy tắc chứng minh theo trường hợp",
-        "id": "19"
+        "id": "19",
+        "recommend": ["15", "16", "17", "18", "20"]
     },
     {
         "keyword": "quy tắc phản ví dụ",
-        "id": "20"
+        "id": "20",
+        "recommend": ["15", "16", "17", "18", "19"]
     },
     {
         "keyword": "vị từ, lượng từ",
-        "id": "21"
+        "id": "21",
+        "recommend": ["1", "10", "14"]
     },
     {
         "keyword": "các phép toán logic",
-        "id": "22"
+        "id": "22",
+        "recommend": ["2", "10", "14", "21"]
     },
     {
         "keyword": "các phép toán trên vị từ",
-        "id": "23"
+        "id": "23",
+        "recommend": ["21","24"]
     },
     {
         "keyword": "định lý vị từ, lượng từ",
-        "id": "24"
+        "id": "24",
+        "recommend": ["21", "23"]
     },
     
     {
         "keyword": "quan hệ hai ngôi",
-        "id": "25"
+        "id": "25",
+        "recommend": ["60", "30", "33"]
     },
     {
         "keyword": "tính chất quan hệ hai ngôi",
-        "id": "60"
+        "id": "60",
+        "recommend": ["30", "33"]
     },
     {
         "keyword": "tính phản xạ",
-        "id": "26"
+        "id": "26",
+        "recommend": ["27", "28", "29"]
     },
     {
         "keyword": "tính đối xứng, phản xứng",
-        "id": "27"
+        "id": "27",
+        "recommend": ["26", "28", "29"]
     },
     {
         "keyword": "tính bắc cầu",
-        "id": "28"
+        "id": "28",
+        "recommend": ["26", "27", "29"]
     },
     {
         "keyword": "biểu diễn quan hệ",
-        "id": "29"
+        "id": "29",
+        "recommend": ["26", "27", "28"]
     },
     {
-        "keyword": "quan hê tương đương",
-        "id": "30"
+        "keyword": "quan hệ tương đương",
+        "id": "30",
+        "recommend": ["25", "33"]
     },
     {
         "keyword": "lớp tương đương",
-        "id": "31"
+        "id": "31",
+        "recommend": ["32", "25", "33"]
     },
     {
         "keyword": "sư phân hoạch các lớp tương đương",
-        "id": "32"
+        "id": "32",
+        "recommend": ["31", "25", "33"]
     },
     {
         "keyword": "quan hệ thứ tự",
-        "id": "33"
+        "id": "33",
+        "recommend": ["25", "30"]
     },
     {
         "keyword": "thứ tự toàn phần, bán phần",
-        "id": "34"
+        "id": "34",
+        "recommend": ["35", "36", "37"]
     },
     {
         "keyword": "biểu đồ hasse",
-        "id": "35"
+        "id": "35",
+        "recommend": ["34", "36", "37"]
     },
     {
         "keyword": "phần tử nhỏ nhất, lớn nhất",
-        "id": "36"
+        "id": "36",
+        "recommend": ["34", "35", "37"]
     },
     {
         "keyword": "phần tử tối thiểu, tối đại",
-        "id": "37"
+        "id": "37",
+        "recommend": ["34", "35", "36"]
     },
 
     {
         "keyword": "đại số logic b",
-        "id": "38"
+        "id": "38",
+        "recommend": ["39", "41", "43", "48", "49", "56", "59"]
     },
     {
         "keyword": "một số phép toán hai ngôi",
-        "id": "39"
+        "id": "39",
+        "recommend": ["38", "41", "43", "48", "49", "56", "59"]
     },
     {
         "keyword": "phép toán hai ngôi",
-        "id": "39"
+        "id": "39",
+        "recommend": ["38", "41", "43", "48", "49", "56", "59"]
     },
     {
         "keyword": "đại số boole",
-        "id": "41"
+        "id": "41",
+        "recommend": ["38", "39", "43", "48", "49", "56", "59"]
     },
     {
         "keyword": "các phép toán logic trong đại số boole",
-        "id": "42"
+        "id": "42",
+        "recommend": ["38", "39", "43", "48", "49", "56", "59"]
     },
     {
         "keyword": "hàm boole",
-        "id": "43"
+        "id": "43",
+        "recommend": ["38", "39", "41", "48", "49", "56", "59"]
     },
     {
         "keyword": "tích sơ cấp",
-        "id": "44"
+        "id": "44",
+        "recommend": ["43", "46", "47"]
     },
     {
         "keyword": "các phép toán trên hàm boole",
-        "id": "44"
+        "id": "44",
+        "recommend": ["43", "46", "47"]
     },
     {
         "keyword": "biểu thức boole",
-        "id": "46"
+        "id": "46",
+        "recommend": ["43", "44", "47"]
     },
     {
         "keyword": "dạng nối rời chính tắc",
-        "id": "47"
+        "id": "47",
+        "recommend": ["43", "44", "46"]
     },
     {
         "keyword": "công thức đa thức tối thiểu",
-        "id": "48"
+        "id": "48",
+        "recommend": ["38", "39", "41", "43", "49", "56", "59"]
     },
     {
         "keyword": "biểu đồ karnaugh của hàm boole",
-        "id": "49"
-    },
-    {
-        "keyword": "bản đồ karnaugh",
-        "id": "50"
+        "id": "49",
+        "recommend": ["38", "39", "41", "43", "48", "56", "59"]
     },
     {
         "keyword": "biểu đồ karbaugh",
-        "id": "50"
+        "id": "50",
+        "recommend": ["52", "53", "54", "55"]
     },
     {
         "keyword": "karnaugh hai biến",
-        "id": "52"
+        "id": "52",
+        "recommend": ["50", "53", "54", "55"]
     },
     {
         "keyword": "karnaugh ba biến",
-        "id": "53"
+        "id": "53",
+        "recommend": ["50", "52", "54", "55"]
     },
     {
         "keyword": "karnaugh bốn biến",
-        "id": "54"
+        "id": "54",
+        "recommend": ["50", "52", "53", "55"]
     },
     {
         "keyword": "thuật toán tìm công thức đa thức tối thiểu",
-        "id": "55"
+        "id": "55",
+        "recommend": ["50", "52", "53", "54"]
     },
     {
         "keyword": "phương pháp quine - mccluskey",
-        "id": "56"
+        "id": "56",
+        "recommend": ["38", "39", "41", "43", "48", "49", "59"]
     },
     {
         "keyword": "dạng tổng chuẩn tắc thu gọn",
-        "id": "57"
+        "id": "57",
+        "recommend": ["56", "58"]
     },
     {
         "keyword": "dạng tổng chuẩn tắc tối thiểu",
-        "id": "58"
+        "id": "58",
+        "recommend": ["56", "57"]
     },
     {
         "keyword": "các cổng logic",
-        "id": "59"
+        "id": "59",
+        "recommend": ["38", "39", "41", "43", "48", "49", "56"]
     }
 ]

@@ -62,7 +62,7 @@ export const RightColumn = styled.div`
     width: 100%;
     height: 100%;
     padding-left: 400px;
-    margin-top: 80px;
+    margin-top: 40px;
 `
 
 export const LeftH2 = styled(Link)`

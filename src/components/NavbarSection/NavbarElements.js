@@ -49,7 +49,7 @@ export const NavbarSearch = styled(Link)`
 export const NavbarMenu = styled.ul`
     display: flex;
     justify-content: space-between;
-    width: 35%;
+    width: 45%;
     list-style-type: none;
     font-size: 16px;
     margin-bottom: 0;

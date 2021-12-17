@@ -24,7 +24,7 @@ const NavbarSection = () => {
                     <NavbarLogo to="/toanroirac">ToánRR</NavbarLogo>
                     <NavbarMenu>
                         <NavbarItem>
-                            <NavbarLink onClick={scrollToTop}>Trang chủ</NavbarLink>
+                            <NavbarLink to="" onClick={scrollToTop}>Trang chủ</NavbarLink>
                         </NavbarItem>
                         <NavbarItem>
                             <NavbarLink activeClass="active"
@@ -33,6 +33,9 @@ const NavbarSection = () => {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}>Nội dung</NavbarLink>
+                        </NavbarItem>
+                        <NavbarItem>
+                            <NavbarSearch to="/toanroirac/baitap">Bài tập</NavbarSearch>
                         </NavbarItem>
                         <NavbarItem>
                             <NavbarLink activeClass="active"

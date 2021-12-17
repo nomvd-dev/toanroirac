@@ -14,12 +14,12 @@ export const SearchContainer = styled.div`
 export const SearchContent = styled.div`
     width: 100%;
     max-width: 1100px;
-    padding: 20px 0;
+    padding-bottom: 20px;
 `
 
 export const SearchSuggestion = styled.div`
     margin-top: 5px;
-    width: 300px;
+    width: 500px;
     height: 200px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -33,7 +33,7 @@ export const SearchSuggestion = styled.div`
 
 export const SearchResult = styled.a`
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     color: black;
@@ -79,12 +79,26 @@ export const Input = styled.input`
 
 export const SearchP = styled.p`
     font-size: 20px;
-    padding-left: 20px;
+    padding: 20px;
     cursor: pointer;
     margin-bottom: 0;
 `
 
-// export const SearchContent = styled.div`
-//     margin-top: 300px;
-//     display: flex;
-// `
+export const LeftColumn = styled.div`
+    color: var(--quinary-color);
+    width: 30%;
+    padding-top: 20px;
+    h2{
+        font-size: 26px;
+        font-weight: 800;
+    }
+`
+
+export const RightColumn = styled.div`
+    width: 70%;
+`
+
+export const Container = styled.div`
+    padding-top: 20px;
+    display: flex;
+`
