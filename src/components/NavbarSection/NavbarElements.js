@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
-import { Link as LinkS } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 export const Nav = styled.div`
     width: 100%;
@@ -59,11 +58,34 @@ export const NavbarItem = styled.li`
     cursor: pointer;
 `
 
-export const NavbarLink = styled(LinkS)`
-    color: var(--primary-color);
-    text-decoration: none;
+export const NavbarLink = styled(Link)`
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
     &:hover{
-        color: var(--primary-color);
+        color: #fff;
         text-decoration: none;
     }
+`
+
+export const NavbarSelect = styled.button`
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+    }
+`
+
+export const NavbarOption = styled(Link)`
+    // background: transparent;
+    // color: #fff;
+    // border: none;
+    // cursor: pointer;
+    // &:hover{
+    //     color: #fff;
+    //     text-decoration: none;
+    // }
 `

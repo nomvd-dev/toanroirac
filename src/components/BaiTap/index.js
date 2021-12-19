@@ -143,7 +143,7 @@ const BaiTapPage = () => {
                             <BaiTap.RightP>
                                 <BaiTap.RightWordBold>Bài giải: </BaiTap.RightWordBold><br/>
                                 n = 1: 7 + 3 - 1 = 9 chia hết cho 9 <br />
-                                - Giả sử với n = k &greater; 1: 7<sup>k</sup> + 3k - 1 chia hết cho 9 <br />
+                                - Giả sử với n = k &gt; 1: 7<sup>k</sup> + 3k - 1 chia hết cho 9 <br />
                                 - Phải CM: 7<sup>k + 1</sup> + 3(k+1) - 1 chia hết cho 9 <br />
                                 - Thật vậy:
                                 7<sup>k + 1</sup> + 3(k+1) - 1 = 7(7<sup>k</sup> + 3k - 1) - 18k + 9 chia hết cho 9

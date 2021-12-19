@@ -59,7 +59,7 @@ export const HeroButton = styled(Link)`
     border: 1px solid transparent;
     border-radius: 50px;
     background: var(--secondary-color);
-    color: var(--tertiary-color);
+    color: var(--primary-color);
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;

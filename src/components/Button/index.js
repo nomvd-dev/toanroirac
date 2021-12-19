@@ -17,3 +17,17 @@ export const Button = styled(Link)`
         text-decoration: none;
     }
 `
+
+export const ToTop =  styled.button`
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        font-size: 40px;
+        background: transparent;
+        border: none;
+        color: var(--quinary-color);
+        transition: all 0.25s ease-in-out;
+        &:hover{
+            transform: scale(1.25);
+        }
+    `
