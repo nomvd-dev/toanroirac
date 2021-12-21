@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../Button'
-import { QuanheColumn1, QuanheContainer, QuanheContent, QuanheH, QuanheImage, QuanheP } from './QuanheElements'
+import { QuanheColumn1, QuanheContainer, QuanheContent, QuanheH, QuanheImage } from './QuanheElements'
 
 const QuanheSection = ({ srcImg, tagH, tagP, buttonText }) => {
     return (
@@ -8,7 +8,7 @@ const QuanheSection = ({ srcImg, tagH, tagP, buttonText }) => {
             <QuanheContainer>
                 <QuanheContent>
                     <QuanheH>{tagH}</QuanheH>
-                    <QuanheP>{tagP}</QuanheP>
+                    {/* <QuanheP>{tagP}</QuanheP> */}
                     <Button to='/toanroirac/quanhe'>{buttonText}</Button>
                 </QuanheContent>
                 <QuanheColumn1>

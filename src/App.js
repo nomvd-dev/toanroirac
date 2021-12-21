@@ -8,6 +8,7 @@ import Quanhe from './pages/Quanhe';
 import Search from './pages/Search';
 import Boole from './pages/Boole';
 import BaiTap from './pages/BaiTap';
+import DeThi from './pages/DeThi';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/toanroirac/boole" component={Boole} />
         <Route path="/toanroirac/baitap" component={BaiTap} />
         <Route path="/toanroirac/search" component={Search} />
+        <Route path="/toanroirac/dethi" component={DeThi} />
         <Route path="/toanroirac" component={Home} />
       </Switch>
       {/* <FooterSection /> */}
