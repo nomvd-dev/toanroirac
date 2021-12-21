@@ -22,8 +22,6 @@ const BaiTapPage = () => {
         { id: 15, value: true },
         { id: 16, value: true }
     ]);
-    // const [link, setLink] = useState("");
-    // const [hint, setHint] = useState(false);
 
     const handleClick = (index) => {
         let newArray = [...show];
