@@ -1,9 +1,17 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Container, Title, LeftColumn, LeftH2, LeftH3, LeftH4, RightColumn, RightH2, RightH3, RightH4, RightP, Div, Image, RightWordBold, RightWordItalic } from '../DetailCoursesElements'
 import { LGPageContainer } from './LogicPageElements';
 import {FaCircle} from 'react-icons/fa'
 
-const LogicPage = () => {
+const LogicPage = ({props}) => {
+    // const [hint, setHint] = useState(false);
+    // const isHint = () => {
+    //     setHint(!hint);
+    // }
+    useEffect(() => {
+        window.scrollTo(0, 0)
+        console.log(props)
+      }, [props]);
     return (
         <div style={{height: "100%"}}>
             <LGPageContainer />

@@ -21,7 +21,6 @@ const Boole = () => {
         <>
             <BoolePage />
             <ToTop onClick={scrollToTop} hidden={show}><BiUpArrowCircle/></ToTop>
-
         </>
     )
 }
