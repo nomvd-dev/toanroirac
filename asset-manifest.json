@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/toanroirac/static/css/main.3e9e3246.chunk.css",
-    "main.js": "/toanroirac/static/js/main.5d9d74af.chunk.js",
-    "main.js.map": "/toanroirac/static/js/main.5d9d74af.chunk.js.map",
+    "main.js": "/toanroirac/static/js/main.17935855.chunk.js",
+    "main.js.map": "/toanroirac/static/js/main.17935855.chunk.js.map",
     "runtime-main.js": "/toanroirac/static/js/runtime-main.0d860106.js",
     "runtime-main.js.map": "/toanroirac/static/js/runtime-main.0d860106.js.map",
     "static/js/2.13e097cd.chunk.js": "/toanroirac/static/js/2.13e097cd.chunk.js",
@@ -39,6 +39,8 @@
     "static/media/8_7.png": "/toanroirac/static/media/8_7.1a2f02e6.png",
     "static/media/8_8.png": "/toanroirac/static/media/8_8.36bf47be.png",
     "static/media/8_9.png": "/toanroirac/static/media/8_9.80dae3fc.png",
+    "static/media/De_mau_ky_2_2020_2021.34c9fedd.pdf": "/toanroirac/static/media/De_mau_ky_2_2020_2021.34c9fedd.pdf",
+    "static/media/De_on_tap_cuoi_ky.a1b692a1.pdf": "/toanroirac/static/media/De_on_tap_cuoi_ky.a1b692a1.pdf",
     "static/media/boole.svg": "/toanroirac/static/media/boole.0ed2a38d.svg",
     "static/media/douutien_bangchantri.jpg": "/toanroirac/static/media/douutien_bangchantri.90163b6b.jpg",
     "static/media/logic.svg": "/toanroirac/static/media/logic.92770432.svg",
@@ -53,6 +55,6 @@
     "static/js/runtime-main.0d860106.js",
     "static/js/2.13e097cd.chunk.js",
     "static/css/main.3e9e3246.chunk.css",
-    "static/js/main.5d9d74af.chunk.js"
+    "static/js/main.17935855.chunk.js"
   ]
 }
