@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '../Button'
-import { BooleColumn1, BooleContainer, BooleContent, BooleH, BooleImage } from './BooleElements'
+import { BooleColumn1, BooleContainer, BooleContent, BooleH, BooleImage, BooleP } from './BooleElements'
 
 const BooleSection = ({ srcImg, tagH, tagP, buttonText }) => {
     return (
@@ -11,7 +11,7 @@ const BooleSection = ({ srcImg, tagH, tagP, buttonText }) => {
                 </BooleColumn1>
                 <BooleContent>
                     <BooleH>{tagH}</BooleH>
-                    {/* <BooleP>{tagP}</BooleP> */}
+                    <BooleP>{tagP}</BooleP>
                     <Button to='/toanroirac/boole'>{buttonText}</Button>
                 </BooleContent>
             </BooleContainer>
